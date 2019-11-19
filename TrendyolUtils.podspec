@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '11.0'
   spec.name         = "TrendyolUtils"
   spec.summary      = "TrendyolUtils is a internal subframework of Trendyol iOS Projects."
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Ahmet Keskin" => "ahmet.keskin@trendyol.com" }
   spec.homepage     = "https://www.trendyol.com"
