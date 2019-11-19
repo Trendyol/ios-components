@@ -25,6 +25,7 @@
 		8A05112C237C3E0B00F0A2C5 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A051119237C3E0B00F0A2C5 /* Double+Extension.swift */; };
 		8A05112D237C3E0B00F0A2C5 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05111A237C3E0B00F0A2C5 /* UIStoryboard+Extension.swift */; };
 		8A051132237C3E5300F0A2C5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8A051131237C3E5300F0A2C5 /* SDWebImage */; };
+		8A6BC5AE23844AF70009D37E /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BC5AD23844AF70009D37E /* UINavigationBar+Extension.swift */; };
 		8AA03E432381C2FB00E0A0FA /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA03E422381C2FB00E0A0FA /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8A051118237C3E0B00F0A2C5 /* Encodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		8A051119237C3E0B00F0A2C5 /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		8A05111A237C3E0B00F0A2C5 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		8A6BC5AD23844AF70009D37E /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		8AA03E422381C2FB00E0A0FA /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				8A051119237C3E0B00F0A2C5 /* Double+Extension.swift */,
 				8A05111A237C3E0B00F0A2C5 /* UIStoryboard+Extension.swift */,
 				8AA03E422381C2FB00E0A0FA /* Int+Extension.swift */,
+				8A6BC5AD23844AF70009D37E /* UINavigationBar+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				8A051129237C3E0B00F0A2C5 /* Collection+Extension.swift in Sources */,
 				8AA03E432381C2FB00E0A0FA /* Int+Extension.swift in Sources */,
 				8A05112B237C3E0B00F0A2C5 /* Encodable+Extension.swift in Sources */,
+				8A6BC5AE23844AF70009D37E /* UINavigationBar+Extension.swift in Sources */,
 				8A05111F237C3E0B00F0A2C5 /* RouterInterface.swift in Sources */,
 				8A051120237C3E0B00F0A2C5 /* ViewInterface.swift in Sources */,
 				8A05112D237C3E0B00F0A2C5 /* UIStoryboard+Extension.swift in Sources */,

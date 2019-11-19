@@ -12,6 +12,5 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/Trendyol/ios-components.git", :tag => "#{spec.version}" }
   spec.source_files  = "Utils/Utils/**/*.swift"
   spec.swift_version = ['5.0', '5.1']
-  spec.public_header_files = 'Utils/Utils/Resource/*.h'
 
 end

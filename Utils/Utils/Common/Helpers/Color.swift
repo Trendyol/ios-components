@@ -29,4 +29,7 @@ public struct Color {
         return UIColor.getHexColor(0x25d6a2) //37|214|162
     }
     
+    public static var borderColor: UIColor {
+        return UIColor.getHexColor(0xe6e6e6) //230|230|230
+    }
 }
