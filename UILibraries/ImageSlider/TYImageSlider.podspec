@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
     spec.source          = {
       :git => 'https://github.com/Trendyol/ios-components.git',
-      :tag => 'ImageSlider-' + s.version.to_s
+      :tag => 'ImageSlider-' + spec.version.to_s
     }
 
     spec.source_files  = "UILibraries/ImageSlider/ImageSlider/**/*.swift"
