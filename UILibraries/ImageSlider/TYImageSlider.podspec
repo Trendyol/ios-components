@@ -16,7 +16,8 @@ Pod::Spec.new do |spec|
       :tag => 'ImageSlider-' + spec.version.to_s
     }
 
-    spec.source_files  = "ImageSlider/**/*.swift"
+    spec.source_files  = "ImageSlider/Classes/**/*.swift"
+    spec.public_header_files = "ImageSlider.framework/Headers/ImageSlider-Swift.h"
     spec.swift_version = ['5.0', '5.1']
   
   end

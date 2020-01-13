@@ -70,8 +70,8 @@
 		674E2D9F23CC967800829394 /* ImageSlider */ = {
 			isa = PBXGroup;
 			children = (
-				674E2DA823CC969800829394 /* Core */,
-				674E2DB123CC969800829394 /* Extension */,
+				674E2DA023CC967800829394 /* ImageSlider.h */,
+				67914CC623CCE380000AFE6A /* Classes */,
 				674E2DBA23CC969F00829394 /* Resource */,
 			);
 			path = ImageSlider;
@@ -118,10 +118,18 @@
 		674E2DBA23CC969F00829394 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				674E2DA023CC967800829394 /* ImageSlider.h */,
 				674E2DA123CC967800829394 /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		67914CC623CCE380000AFE6A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				674E2DA823CC969800829394 /* Core */,
+				674E2DB123CC969800829394 /* Extension */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		700C49FBA03C5A85F06A79B6 /* Pods */ = {
