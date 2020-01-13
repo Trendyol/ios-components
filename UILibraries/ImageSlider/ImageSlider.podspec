@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.author       = { "Emre Ergün" => "emre.ergun@trendyol.com" }
     spec.homepage     = "https://www.trendyol.com"
     spec.source       = { :git => "https://github.com/Trendyol/ios-components.git", :tag => "#{spec.version}" }
-    spec.source_files  = "ImageSlider/**/*.swift"
+    spec.source_files  = "ImageSlider/Classes/**/*"
     spec.swift_version = ['5.0', '5.1']
   
   end
