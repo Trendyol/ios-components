@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.authors      = "DSM Group Trendyol"
     spec.homepage     = "https://www.trendyol.com"
 
-    s.source          = {
+    spec.source          = {
       :git => 'https://github.com/Trendyol/ios-components.git',
       :tag => 'ImageSlider-' + s.version.to_s
     }
