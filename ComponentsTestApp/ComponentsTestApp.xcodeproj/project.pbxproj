@@ -13,7 +13,23 @@
 		674E2D8723CC945300829394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674E2D8523CC945300829394 /* Main.storyboard */; };
 		674E2D8923CC945400829394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674E2D8823CC945400829394 /* Assets.xcassets */; };
 		674E2D8C23CC945400829394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674E2D8A23CC945400829394 /* LaunchScreen.storyboard */; };
+		674E2DBD23CC96C800829394 /* ImageSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674E2DBC23CC96C800829394 /* ImageSlider.framework */; };
+		674E2DBE23CC96C800829394 /* ImageSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 674E2DBC23CC96C800829394 /* ImageSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		674E2DBF23CC96C800829394 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				674E2DBE23CC96C800829394 /* ImageSlider.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		674E2D7C23CC945300829394 /* ComponentsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		674E2D8823CC945400829394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		674E2D8B23CC945400829394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		674E2D8D23CC945400829394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674E2DBC23CC96C800829394 /* ImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674E2DBD23CC96C800829394 /* ImageSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				674E2D7E23CC945300829394 /* ComponentsTestApp */,
 				674E2D7D23CC945300829394 /* Products */,
+				674E2DBB23CC96C800829394 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,14 @@
 			path = ComponentsTestApp;
 			sourceTree = "<group>";
 		};
+		674E2DBB23CC96C800829394 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				674E2DBC23CC96C800829394 /* ImageSlider.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +104,7 @@
 				674E2D7823CC945300829394 /* Sources */,
 				674E2D7923CC945300829394 /* Frameworks */,
 				674E2D7A23CC945300829394 /* Resources */,
+				674E2DBF23CC96C800829394 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
