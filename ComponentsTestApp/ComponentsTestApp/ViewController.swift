@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var imageSlider: ImageSliderView!
     
-    
     let testImageUrls = [
     "https://cdn.dolap.com/product/org/canta/kol-cantasi/herry_20425452.jpg",
     "https://cdn.dolap.com/product/org/canta/kol-cantasi/herry_20425453.jpg",

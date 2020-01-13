@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10DB384BABA1C2EF22A90D28 /* Pods_ImageSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA29ADD9E4FD7852CA562F1 /* Pods_ImageSlider.framework */; };
 		674E2DA223CC967800829394 /* ImageSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 674E2DA023CC967800829394 /* ImageSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		674E2DB323CC969800829394 /* ImageSliderPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAA23CC969800829394 /* ImageSliderPagerView.swift */; };
 		674E2DB423CC969800829394 /* ImageSliderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAB23CC969800829394 /* ImageSliderViewPresenter.swift */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FAA08766433528AFF5EAE36 /* Pods-ImageSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSlider.release.xcconfig"; path = "Target Support Files/Pods-ImageSlider/Pods-ImageSlider.release.xcconfig"; sourceTree = "<group>"; };
+		66B39C893F3F20AEF1D62F51 /* Pods-ImageSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSlider.debug.xcconfig"; path = "Target Support Files/Pods-ImageSlider/Pods-ImageSlider.debug.xcconfig"; sourceTree = "<group>"; };
 		674E2D9D23CC967800829394 /* ImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674E2DA023CC967800829394 /* ImageSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageSlider.h; sourceTree = "<group>"; };
 		674E2DA123CC967800829394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +31,8 @@
 		674E2DAF23CC969800829394 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		674E2DB023CC969800829394 /* ImageSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		674E2DB223CC969800829394 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		67914CC023CCD9D4000AFE6A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA29ADD9E4FD7852CA562F1 /* Pods_ImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DB384BABA1C2EF22A90D28 /* Pods_ImageSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,8 @@
 			children = (
 				674E2D9F23CC967800829394 /* ImageSlider */,
 				674E2D9E23CC967800829394 /* Products */,
+				700C49FBA03C5A85F06A79B6 /* Pods */,
+				9C0A76449BA3AC850FE912B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +121,25 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		700C49FBA03C5A85F06A79B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66B39C893F3F20AEF1D62F51 /* Pods-ImageSlider.debug.xcconfig */,
+				3FAA08766433528AFF5EAE36 /* Pods-ImageSlider.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
+		9C0A76449BA3AC850FE912B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67914CC023CCD9D4000AFE6A /* SDWebImage.framework */,
+				DBA29ADD9E4FD7852CA562F1 /* Pods_ImageSlider.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 674E2DA523CC967800829394 /* Build configuration list for PBXNativeTarget "ImageSlider" */;
 			buildPhases = (
+				6CFD0590852B5C26B4C4BA33 /* [CP] Check Pods Manifest.lock */,
 				674E2D9823CC967800829394 /* Headers */,
 				674E2D9923CC967800829394 /* Sources */,
 				674E2D9A23CC967800829394 /* Frameworks */,
@@ -187,6 +215,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CFD0590852B5C26B4C4BA33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageSlider-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		674E2D9923CC967800829394 /* Sources */ = {
@@ -327,6 +380,7 @@
 		};
 		674E2DA623CC967800829394 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66B39C893F3F20AEF1D62F51 /* Pods-ImageSlider.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -352,6 +406,7 @@
 		};
 		674E2DA723CC967800829394 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FAA08766433528AFF5EAE36 /* Pods-ImageSlider.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
