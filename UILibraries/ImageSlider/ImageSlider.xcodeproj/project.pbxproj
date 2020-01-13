@@ -16,6 +16,7 @@
 		674E2DB723CC969800829394 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAF23CC969800829394 /* ImageSliderCollectionViewCell.swift */; };
 		674E2DB823CC969800829394 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DB023CC969800829394 /* ImageSliderView.swift */; };
 		674E2DB923CC969800829394 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DB223CC969800829394 /* UIViewExtensions.swift */; };
+		67914CC523CCDB74000AFE6A /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67914CC423CCDB74000AFE6A /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		674E2DB023CC969800829394 /* ImageSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		674E2DB223CC969800829394 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		67914CC023CCD9D4000AFE6A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67914CC423CCDB74000AFE6A /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		DBA29ADD9E4FD7852CA562F1 /* Pods_ImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				674E2DB223CC969800829394 /* UIViewExtensions.swift */,
+				67914CC423CCDB74000AFE6A /* UIImageViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67914CC523CCDB74000AFE6A /* UIImageViewExtensions.swift in Sources */,
 				674E2DB423CC969800829394 /* ImageSliderViewPresenter.swift in Sources */,
 				674E2DB523CC969800829394 /* ImageSliderCollectionViewCellPresenter.swift in Sources */,
 				674E2DB323CC969800829394 /* ImageSliderPagerView.swift in Sources */,
