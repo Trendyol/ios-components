@@ -18,8 +18,17 @@ final class PinchableImageViewDemoViewController: UIViewController {
     }
     
     @IBAction func minimumZoomScaleSliderChanged(_ sender: UISlider) {
-        print("minimumZoomScaleSliderChanged: \(sender.value)")
-        let minScale = Double(sender.value/5)
-        pinchableImageView.minZoomScale = 5
+        let minScale = CGFloat(sender.value/5)
+        pinchableImageView.minZoomScale = minScale
+    }
+    
+    @IBAction func maximumZoomScaleSliderChanged(_ sender: UISlider) {
+        let maxScale = CGFloat(sender.value)
+        pinchableImageView.maxZoomScale = maxScale
+    }
+    
+    @IBAction func resetAnimationDurationSliderChanged(_ sender: UISlider) {
+        let duration = Double(sender.value/5)
+        pinchableImageView.resetAnimationDuration = duration
     }
 }

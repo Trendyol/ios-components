@@ -61,7 +61,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZkH-KM-XMz">
                                         <rect key="frame" x="0.0" y="74.5" width="344" height="54.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Zoom Scale (1x - 3x)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weL-mo-Uh1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Zoom Scale (1x - 5x)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weL-mo-Uh1">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -69,13 +69,16 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-Xs-4Hd">
                                                 <rect key="frame" x="-2" y="24.5" width="348" height="31"/>
+                                                <connections>
+                                                    <action selector="maximumZoomScaleSliderChanged:" destination="RcH-pZ-KSO" eventType="valueChanged" id="UBd-4C-jDC"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JLH-K4-RDb">
                                         <rect key="frame" x="0.0" y="149" width="344" height="54.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Animation Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixD-Tp-wAp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Animation Duration (0.2 sec - 1 sec)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixD-Tp-wAp">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -83,6 +86,9 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="h1G-Fe-FMf">
                                                 <rect key="frame" x="-2" y="24.5" width="348" height="31"/>
+                                                <connections>
+                                                    <action selector="resetAnimationDurationSliderChanged:" destination="RcH-pZ-KSO" eventType="valueChanged" id="BDR-Ul-NUg"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
