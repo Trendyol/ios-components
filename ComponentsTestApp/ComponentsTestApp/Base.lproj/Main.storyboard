@@ -23,10 +23,19 @@
                                     <constraint firstAttribute="width" secondItem="tIz-ei-88d" secondAttribute="height" multiplier="1:1" id="0Ax-FA-qMq"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinchtest" translatesAutoresizingMaskIntoConstraints="NO" id="ViP-wm-kk7" customClass="PinchableImageView" customModule="PinchableImageView">
+                                <rect key="frame" x="20" y="448" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ViP-wm-kk7" secondAttribute="height" multiplier="1:1" id="gxn-SL-N7w"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="tIz-ei-88d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6aa-nv-XNI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ViP-wm-kk7" secondAttribute="trailing" id="Sn0-fv-86v"/>
+                            <constraint firstItem="ViP-wm-kk7" firstAttribute="top" secondItem="tIz-ei-88d" secondAttribute="bottom" constant="30" id="UWT-Ow-edj"/>
+                            <constraint firstItem="ViP-wm-kk7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bGi-4e-vFN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tIz-ei-88d" secondAttribute="trailing" id="lIy-Ak-nKa"/>
                             <constraint firstItem="tIz-ei-88d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u1j-r0-3ca"/>
                         </constraints>
@@ -34,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="imageSlider" destination="tIz-ei-88d" id="YJi-aD-Kth"/>
+                        <outlet property="pinchableImageView" destination="ViP-wm-kk7" id="HuJ-Yz-sTF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -41,4 +51,7 @@
             <point key="canvasLocation" x="139" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pinchtest" width="937" height="1250"/>
+    </resources>
 </document>

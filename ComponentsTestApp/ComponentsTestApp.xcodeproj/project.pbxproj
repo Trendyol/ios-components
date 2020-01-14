@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		674E2D8C23CC945400829394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674E2D8A23CC945400829394 /* LaunchScreen.storyboard */; };
 		674E2DBD23CC96C800829394 /* ImageSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674E2DBC23CC96C800829394 /* ImageSlider.framework */; };
 		674E2DBE23CC96C800829394 /* ImageSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 674E2DBC23CC96C800829394 /* ImageSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67B1652023CD97F400651817 /* PinchableImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1651F23CD97F400651817 /* PinchableImageView.framework */; };
+		67B1652123CD97F400651817 /* PinchableImageView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1651F23CD97F400651817 /* PinchableImageView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8579E9119F04FFD35A28A7AA /* Pods_ComponentsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8AEFAB6A2683061C1103FA /* Pods_ComponentsTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				67B1652123CD97F400651817 /* PinchableImageView.framework in Embed Frameworks */,
 				674E2DBE23CC96C800829394 /* ImageSlider.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -44,6 +47,7 @@
 		674E2D8D23CC945400829394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		674E2DBC23CC96C800829394 /* ImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67914CBD23CCD9B1000AFE6A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B1651F23CD97F400651817 /* PinchableImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PinchableImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CABDB6516DD4D28E538259 /* Pods-ComponentsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsTestApp.release.xcconfig"; path = "Target Support Files/Pods-ComponentsTestApp/Pods-ComponentsTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		AB8AEFAB6A2683061C1103FA /* Pods_ComponentsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComponentsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -54,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				674E2DBD23CC96C800829394 /* ImageSlider.framework in Frameworks */,
+				67B1652023CD97F400651817 /* PinchableImageView.framework in Frameworks */,
 				8579E9119F04FFD35A28A7AA /* Pods_ComponentsTestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +101,7 @@
 		674E2DBB23CC96C800829394 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67B1651F23CD97F400651817 /* PinchableImageView.framework */,
 				67914CBD23CCD9B1000AFE6A /* SDWebImage.framework */,
 				674E2DBC23CC96C800829394 /* ImageSlider.framework */,
 				AB8AEFAB6A2683061C1103FA /* Pods_ComponentsTestApp.framework */,

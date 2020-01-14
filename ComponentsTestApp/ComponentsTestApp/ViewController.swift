@@ -6,12 +6,14 @@
 //  Copyright © 2020 Emre Ergün. All rights reserved.
 //
 
+import PinchableImageView
 import ImageSlider
 import UIKit
 
 class ViewController: UIViewController {
     
     @IBOutlet private weak var imageSlider: ImageSliderView!
+    @IBOutlet private weak var pinchableImageView: PinchableImageView!
     
     let testImageUrls = [
     "https://cdn.dolap.com/product/org/canta/kol-cantasi/herry_20425452.jpg",
