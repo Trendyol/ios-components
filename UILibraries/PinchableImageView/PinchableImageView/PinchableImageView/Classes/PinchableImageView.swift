@@ -58,19 +58,19 @@ open class PinchableImageView: UIImageView {
     
     // MARK: Private Initializations
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
         commonInit()
     }
     
-    override init(image: UIImage?, highlightedImage: UIImage?) {
+    override public init(image: UIImage?, highlightedImage: UIImage?) {
         super.init(image: image, highlightedImage: highlightedImage)
         
         commonInit()
     }
     
-    override init(image: UIImage?) {
+    override public init(image: UIImage?) {
         super.init(image: image)
         
         commonInit()
