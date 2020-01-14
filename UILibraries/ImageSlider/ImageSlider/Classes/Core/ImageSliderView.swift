@@ -131,7 +131,6 @@ extension ImageSliderView: ImageSliderViewInterface {
     }
 
     public func prepareCollectionView() {
-        let bundle = Bundle(for: ImageSliderCollectionViewCell.self)
         collectionView.register(ImageSliderCollectionViewCell.self, forCellWithReuseIdentifier: "ImageSliderCollectionViewCell")
         collectionView.isPagingEnabled = true
     }
