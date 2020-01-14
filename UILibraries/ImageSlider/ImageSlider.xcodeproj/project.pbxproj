@@ -16,7 +16,23 @@
 		674E2DB823CC969800829394 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DB023CC969800829394 /* ImageSliderView.swift */; };
 		674E2DB923CC969800829394 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DB223CC969800829394 /* UIViewExtensions.swift */; };
 		67914CC523CCDB74000AFE6A /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67914CC423CCDB74000AFE6A /* UIImageViewExtensions.swift */; };
+		67B1652423CDA65700651817 /* PinchableImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1652323CDA65700651817 /* PinchableImageView.framework */; };
+		67B1652523CDA65700651817 /* PinchableImageView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1652323CDA65700651817 /* PinchableImageView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67B1652623CDA65700651817 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67B1652523CDA65700651817 /* PinchableImageView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3FAA08766433528AFF5EAE36 /* Pods-ImageSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSlider.release.xcconfig"; path = "Target Support Files/Pods-ImageSlider/Pods-ImageSlider.release.xcconfig"; sourceTree = "<group>"; };
@@ -32,6 +48,7 @@
 		674E2DB223CC969800829394 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		67914CC023CCD9D4000AFE6A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67914CC423CCDB74000AFE6A /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		67B1652323CDA65700651817 /* PinchableImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PinchableImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA29ADD9E4FD7852CA562F1 /* Pods_ImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B1652423CDA65700651817 /* PinchableImageView.framework in Frameworks */,
 				10DB384BABA1C2EF22A90D28 /* Pods_ImageSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +160,7 @@
 		9C0A76449BA3AC850FE912B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67B1652323CDA65700651817 /* PinchableImageView.framework */,
 				67914CC023CCD9D4000AFE6A /* SDWebImage.framework */,
 				DBA29ADD9E4FD7852CA562F1 /* Pods_ImageSlider.framework */,
 			);
@@ -171,6 +190,7 @@
 				674E2D9923CC967800829394 /* Sources */,
 				674E2D9A23CC967800829394 /* Frameworks */,
 				674E2D9B23CC967800829394 /* Resources */,
+				67B1652623CDA65700651817 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
