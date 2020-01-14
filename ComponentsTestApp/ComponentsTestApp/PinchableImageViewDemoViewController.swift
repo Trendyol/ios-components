@@ -16,4 +16,10 @@ final class PinchableImageViewDemoViewController: UIViewController {
         super.viewDidLoad()
         title = "Pinchable ImageView"
     }
+    
+    @IBAction func minimumZoomScaleSliderChanged(_ sender: UISlider) {
+        print("minimumZoomScaleSliderChanged: \(sender.value)")
+        let minScale = Double(sender.value/5)
+        pinchableImageView.minZoomScale = 5
+    }
 }
