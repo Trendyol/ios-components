@@ -10,6 +10,11 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     @IBOutlet private weak var componentsTableView: UITableView!
+    
+    private func componentItemSelected(at indexPath: IndexPath) {
+        guard let componentItem = Component(rawValue: indexPath.row) else { return }
+        navigationController?.pushViewController(componentItem.associatedDemoViewController, animated: true)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -26,6 +31,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(64.0)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        componentItemSelected(at: indexPath)
+    }
 }
 
 extension HomeViewController {
@@ -36,10 +45,16 @@ extension HomeViewController {
         var title: String {
             switch self {
             case .ImageSlider:
-                return "Image Slider"
+                return "ImageSlider"
             case .PinchableImageView:
-                return "Pinchable ImageView"
+                return "PinchableImageView"
             }
+        }
+        
+        var associatedDemoViewController: UIViewController {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            return storyboard.instantiateViewController(withIdentifier: self.title)
+            
         }
     }
 }

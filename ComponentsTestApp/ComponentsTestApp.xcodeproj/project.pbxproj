@@ -17,6 +17,8 @@
 		67B1652023CD97F400651817 /* PinchableImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1651F23CD97F400651817 /* PinchableImageView.framework */; };
 		67B1652123CD97F400651817 /* PinchableImageView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1651F23CD97F400651817 /* PinchableImageView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67B1652823CDD1DF00651817 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1652723CDD1DF00651817 /* HomeViewController.swift */; };
+		67B1652A23CDD4D800651817 /* PinchableImageViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1652923CDD4D800651817 /* PinchableImageViewDemoViewController.swift */; };
+		67B1652C23CDD67E00651817 /* ImageSliderDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1652B23CDD67E00651817 /* ImageSliderDemoViewController.swift */; };
 		8579E9119F04FFD35A28A7AA /* Pods_ComponentsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8AEFAB6A2683061C1103FA /* Pods_ComponentsTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		67914CBD23CCD9B1000AFE6A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B1651F23CD97F400651817 /* PinchableImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PinchableImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B1652723CDD1DF00651817 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		67B1652923CDD4D800651817 /* PinchableImageViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchableImageViewDemoViewController.swift; sourceTree = "<group>"; };
+		67B1652B23CDD67E00651817 /* ImageSliderDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderDemoViewController.swift; sourceTree = "<group>"; };
 		94CABDB6516DD4D28E538259 /* Pods-ComponentsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsTestApp.release.xcconfig"; path = "Target Support Files/Pods-ComponentsTestApp/Pods-ComponentsTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		AB8AEFAB6A2683061C1103FA /* Pods_ComponentsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComponentsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +94,8 @@
 				674E2D7F23CC945300829394 /* AppDelegate.swift */,
 				674E2D8123CC945300829394 /* SceneDelegate.swift */,
 				67B1652723CDD1DF00651817 /* HomeViewController.swift */,
+				67B1652923CDD4D800651817 /* PinchableImageViewDemoViewController.swift */,
+				67B1652B23CDD67E00651817 /* ImageSliderDemoViewController.swift */,
 				674E2D8523CC945300829394 /* Main.storyboard */,
 				674E2D8823CC945400829394 /* Assets.xcassets */,
 				674E2D8A23CC945400829394 /* LaunchScreen.storyboard */,
@@ -236,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				674E2D8023CC945300829394 /* AppDelegate.swift in Sources */,
+				67B1652C23CDD67E00651817 /* ImageSliderDemoViewController.swift in Sources */,
+				67B1652A23CDD4D800651817 /* PinchableImageViewDemoViewController.swift in Sources */,
 				674E2D8223CC945300829394 /* SceneDelegate.swift in Sources */,
 				67B1652823CDD1DF00651817 /* HomeViewController.swift in Sources */,
 			);
