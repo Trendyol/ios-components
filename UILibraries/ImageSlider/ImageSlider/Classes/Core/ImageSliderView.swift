@@ -41,6 +41,7 @@ public final class ImageSliderView: UIView {
         collection.delegate = self
         collection.dataSource = self
         collection.backgroundColor = .clear
+        collection.showsHorizontalScrollIndicator = false
         return collection
     }()
     

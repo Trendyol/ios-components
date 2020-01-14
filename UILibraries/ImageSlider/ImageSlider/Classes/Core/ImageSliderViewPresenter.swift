@@ -26,11 +26,13 @@ private extension ImageSliderViewPresenter {
 public final class ImageSliderViewPresenter {
     weak var view: ImageSliderViewInterface?
     private let imageUrls: [String]
+    private let loopingEnabled: Bool
 
     // MARK: Initialization
-    public init(imageUrls: [String], view: ImageSliderViewInterface?) {
+    public init(imageUrls: [String], loopingEnabled: Bool = true, view: ImageSliderViewInterface?) {
         self.view = view
         self.imageUrls = imageUrls
+        self.loopingEnabled = loopingEnabled
 
         view?.setPageControllerHidden(hide: imageUrls.count < Constant.pageControlMinimumVisibleImageCount)
         view?.hideThumbnailImage()
@@ -49,6 +51,8 @@ public final class ImageSliderViewPresenter {
     // MARK: Private Helper Methods
     private func manipulateImageUrls(_ imageUrls: [String]) -> [String] {
         guard imageUrls.count > 1 else { return imageUrls }
+        guard loopingEnabled else { return imageUrls }
+        
         guard let firstElement = imageUrls.first, let lastElement = imageUrls.last else { return imageUrls }
 
         var transformedArray = [String]()
@@ -60,6 +64,7 @@ public final class ImageSliderViewPresenter {
     }
 
     private func handleLoopingAfterDeceleration() {
+        guard loopingEnabled else { return }
         guard let view = view, imageUrls.count > 1 else { return }
 
         if innerPageIndex == 0 {
@@ -76,7 +81,7 @@ public final class ImageSliderViewPresenter {
 
     private func handlePager() {
         guard imageUrls.count > 1 else { return }
-        view?.setPager(to: innerPageIndex-1)
+        view?.setPager(to: innerPageIndex - (loopingEnabled ? 1:0))
     }
 }
 
@@ -100,7 +105,9 @@ extension ImageSliderViewPresenter: ImageSliderViewPresenterInterface {
         view?.prepareSubviews()
 
         if let view = view {
-            view.scroll(to: view.scrollViewWidth, animate: false)
+            if loopingEnabled {
+                view.scroll(to: view.scrollViewWidth, animate: false)
+            }
             view.preparePageControl(numberOfPages: imageUrls.count)
             view.setPager(to: 0)
         }
