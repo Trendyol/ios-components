@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = '11.0'
     spec.name         = "TYImageSlider"
     spec.summary      = "ImageSlider is a custom view to show array of images in carousel form"
-    spec.version      = "0.0.8"
+    spec.version      = "0.0.9"
     spec.license      = { :type => "MIT", :file => "LICENSE" }
     spec.authors      = "DSM Group Trendyol"
     spec.homepage     = "https://www.trendyol.com"

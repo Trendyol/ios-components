@@ -6,7 +6,7 @@
 //  Copyright © 2019 Trendyol.com. All rights reserved.
 //
 
-import PinchableImageView
+import TYPinchableImageView
 import UIKit
 
 protocol ImageSliderCollectionViewCellInterface: class {
