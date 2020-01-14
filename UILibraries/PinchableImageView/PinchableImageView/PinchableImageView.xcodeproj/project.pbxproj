@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				67B1651423CD964C00651817 /* PinchableImageView.h */,
-				67B1651D23CD968600651817 /* PinchableImageView.swift */,
+				67B1652223CD993300651817 /* Classes */,
 				67B1651C23CD967900651817 /* Resource */,
 			);
 			path = PinchableImageView;
@@ -61,6 +61,14 @@
 				67B1651523CD964C00651817 /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		67B1652223CD993300651817 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				67B1651D23CD968600651817 /* PinchableImageView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
