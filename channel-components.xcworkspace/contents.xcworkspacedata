@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:UILibraries/PinchableImageView/PinchableImageView/PinchableImageView.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:UILibraries/ImageSlider/ImageSlider.xcodeproj">
    </FileRef>
    <FileRef
