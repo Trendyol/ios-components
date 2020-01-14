@@ -14,16 +14,32 @@ protocol ImageSliderCollectionViewCellInterface: class {
 }
 
 final class ImageSliderCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView! {
-        didSet {
-            imageView.contentMode = .scaleAspectFill
-        }
-    }
+    lazy var contentImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    @IBOutlet private weak var someImageView: UIImageView!
     
     var presenter: ImageSliderCollectionViewCellPresenterInterface! {
         didSet {
             presenter.load()
         }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupUI()
+    }
+    
+    private func setupUI() {
+        contentImageView.embedEdgeToEdge(in: self)
     }
     
     override func prepareForReuse() {
@@ -34,10 +50,10 @@ final class ImageSliderCollectionViewCell: UICollectionViewCell {
 
 extension ImageSliderCollectionViewCell: ImageSliderCollectionViewCellInterface {
     func resetImage() {
-        imageView.image = nil
+        contentImageView.image = nil
     }
     
     func loadImage(url: String?) {
-        imageView.setImageWith(path: url)
+        contentImageView.setImageWith(path: url)
     }
 }

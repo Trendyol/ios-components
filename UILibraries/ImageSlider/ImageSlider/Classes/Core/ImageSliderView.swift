@@ -8,20 +8,6 @@
 
 import UIKit
 
-extension ImageSliderView {
-    private struct Constant {
-        struct UI {
-            static let freeShipmentTagCornerRadius: CGFloat = 3
-            static let alpha: CGFloat = 0.55
-            static let gradientViewHeight: CGFloat = 100
-
-            struct Color {
-                static let freeShipmentTag: UIColor = UIColor.green //230|230|230
-            }
-        }
-    }
-}
-
 public protocol ImageSliderViewInterface: class {
     var scrollViewContentOffsetXPos: Double { get }
     var scrollViewWidth: Double { get }
@@ -117,7 +103,7 @@ extension ImageSliderView: ImageSliderViewInterface {
     public var presentedImageView: UIImageView? {
         guard let presenter = presenter else { return nil }
         guard let cell = collectionView.cellForItem(at: IndexPath(row: presenter.currentInnerPageIndex, section: 0)) as? ImageSliderCollectionViewCell else { return nil }
-        return cell.imageView
+        return cell.contentImageView
     }
 
     public func preparePageControl(numberOfPages: Int) {
@@ -146,7 +132,7 @@ extension ImageSliderView: ImageSliderViewInterface {
 
     public func prepareCollectionView() {
         let bundle = Bundle(for: ImageSliderCollectionViewCell.self)
-        collectionView.register(UINib(nibName: "ImageSliderCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "ImageSliderCollectionViewCell")
+        collectionView.register(ImageSliderCollectionViewCell.self, forCellWithReuseIdentifier: "ImageSliderCollectionViewCell")
         collectionView.isPagingEnabled = true
     }
     

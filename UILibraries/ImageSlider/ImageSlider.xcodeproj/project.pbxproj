@@ -12,7 +12,6 @@
 		674E2DB323CC969800829394 /* ImageSliderPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAA23CC969800829394 /* ImageSliderPagerView.swift */; };
 		674E2DB423CC969800829394 /* ImageSliderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAB23CC969800829394 /* ImageSliderViewPresenter.swift */; };
 		674E2DB523CC969800829394 /* ImageSliderCollectionViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAD23CC969800829394 /* ImageSliderCollectionViewCellPresenter.swift */; };
-		674E2DB623CC969800829394 /* ImageSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 674E2DAE23CC969800829394 /* ImageSliderCollectionViewCell.xib */; };
 		674E2DB723CC969800829394 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DAF23CC969800829394 /* ImageSliderCollectionViewCell.swift */; };
 		674E2DB823CC969800829394 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DB023CC969800829394 /* ImageSliderView.swift */; };
 		674E2DB923CC969800829394 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2DB223CC969800829394 /* UIViewExtensions.swift */; };
@@ -28,7 +27,6 @@
 		674E2DAA23CC969800829394 /* ImageSliderPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderPagerView.swift; sourceTree = "<group>"; };
 		674E2DAB23CC969800829394 /* ImageSliderViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderViewPresenter.swift; sourceTree = "<group>"; };
 		674E2DAD23CC969800829394 /* ImageSliderCollectionViewCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCellPresenter.swift; sourceTree = "<group>"; };
-		674E2DAE23CC969800829394 /* ImageSliderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageSliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		674E2DAF23CC969800829394 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		674E2DB023CC969800829394 /* ImageSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		674E2DB223CC969800829394 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				674E2DAD23CC969800829394 /* ImageSliderCollectionViewCellPresenter.swift */,
-				674E2DAE23CC969800829394 /* ImageSliderCollectionViewCell.xib */,
 				674E2DAF23CC969800829394 /* ImageSliderCollectionViewCell.swift */,
 			);
 			path = ImageSliderCollectionViewCell;
@@ -221,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				674E2DB623CC969800829394 /* ImageSliderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
