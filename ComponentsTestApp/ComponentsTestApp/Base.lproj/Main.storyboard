@@ -121,9 +121,26 @@
                     <view key="view" contentMode="scaleToFill" id="I9t-U9-DXv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-R9-1Md" customClass="ImageSliderView" customModule="ImageSlider">
+                                <rect key="frame" x="20" y="44" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f3h-R9-1Md" secondAttribute="height" multiplier="1:1" id="f1m-Yt-o3e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="f3h-R9-1Md" secondAttribute="trailing" id="0gF-G0-e08"/>
+                            <constraint firstItem="f3h-R9-1Md" firstAttribute="leading" secondItem="I9t-U9-DXv" secondAttribute="leadingMargin" id="Fuw-nn-rNT"/>
+                            <constraint firstItem="f3h-R9-1Md" firstAttribute="top" secondItem="I9t-U9-DXv" secondAttribute="topMargin" id="cX8-O8-1zY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="90n-z2-kpr"/>
                     </view>
+                    <connections>
+                        <outlet property="imageSliderView" destination="f3h-R9-1Md" id="Z4r-MT-Q6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRW-vz-BOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
