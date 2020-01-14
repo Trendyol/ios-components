@@ -6,6 +6,7 @@
 //  Copyright © 2019 Trendyol.com. All rights reserved.
 //
 
+import PinchableImageView
 import UIKit
 
 protocol ImageSliderCollectionViewCellInterface: class {
@@ -14,8 +15,8 @@ protocol ImageSliderCollectionViewCellInterface: class {
 }
 
 final class ImageSliderCollectionViewCell: UICollectionViewCell {
-    lazy var contentImageView: UIImageView = {
-        let imageView = UIImageView()
+    lazy var contentImageView: PinchableImageView = {
+        let imageView = PinchableImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
