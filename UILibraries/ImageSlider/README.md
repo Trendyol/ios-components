@@ -55,6 +55,12 @@ Configure imageSlider view while you are creating instance of ImageSliderViewPre
 * **loopingEnabled:** It enables looping through images when set to true
 * **view:** ImageSlider view instance
 
+## <br/> Dependencies
+ImageSlider uses libraries below;
+
+* [SDWebImage](https://github.com/SDWebImage/SDWebImage)
+* [PinchableImageView](https://github.com/Trendyol/ios-components/tree/master/UILibraries/PinchableImageView/)
+
 ## <br/>Todos
 
 * ImageSliderView initializes from interface builder only at this moment. It should be initialize from code directly
