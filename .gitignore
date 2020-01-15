@@ -16,7 +16,6 @@ xcuserdata
 DerivedData
 *.xcuserstate
 .DS_Store
-*.md
 
 # Swift Package Manager
 .build/
