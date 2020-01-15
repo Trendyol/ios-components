@@ -94,8 +94,7 @@
 				674E2D7F23CC945300829394 /* AppDelegate.swift */,
 				674E2D8123CC945300829394 /* SceneDelegate.swift */,
 				67B1652723CDD1DF00651817 /* HomeViewController.swift */,
-				67B1652923CDD4D800651817 /* PinchableImageViewDemoViewController.swift */,
-				67B1652B23CDD67E00651817 /* ImageSliderDemoViewController.swift */,
+				67B1652D23CF46AB00651817 /* LibraryDemoViewControllers */,
 				674E2D8523CC945300829394 /* Main.storyboard */,
 				674E2D8823CC945400829394 /* Assets.xcassets */,
 				674E2D8A23CC945400829394 /* LaunchScreen.storyboard */,
@@ -113,6 +112,15 @@
 				AB8AEFAB6A2683061C1103FA /* Pods_ComponentsTestApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67B1652D23CF46AB00651817 /* LibraryDemoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				67B1652923CDD4D800651817 /* PinchableImageViewDemoViewController.swift */,
+				67B1652B23CDD67E00651817 /* ImageSliderDemoViewController.swift */,
+			);
+			path = LibraryDemoViewControllers;
 			sourceTree = "<group>";
 		};
 		7EA2BAE1FD865FAFCD7FC01E /* Pods */ = {
