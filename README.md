@@ -27,7 +27,7 @@ Custom collection view based slider component with infinite circular scrolling
 # PinchableImageView
 Provides full screen zooming ability to UIImageView like instagram.
 
-[PinchableImageView Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/PinchableImageView/PinchableImageView)
+[PinchableImageView Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/PinchableImageView/)
 
 
 License
