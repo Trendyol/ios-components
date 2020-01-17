@@ -142,7 +142,7 @@ fileprivate class PinchZoomHandler {
         
         switch pinchGesture.state {
         case .began:
-        
+            
             guard !isZoomingActive, pinchGesture.scale >= minZoomScale else { return }
             
             guard let point = sourceImageView.superview?.convert(sourceImageView.frame.origin, to: nil) else { return }
@@ -153,7 +153,7 @@ fileprivate class PinchZoomHandler {
             zoomImageView = UIImageView(image: sourceImageView.image)
             zoomImageView.contentMode = sourceImageView.contentMode
             zoomImageView.frame = initialRect
-
+            
             let anchorPoint = CGPoint(x: lastTouchPoint.x/initialRect.size.width, y: lastTouchPoint.y/initialRect.size.height)
             zoomImageView.layer.anchorPoint = anchorPoint
             zoomImageView.center = lastTouchPoint
@@ -183,7 +183,7 @@ fileprivate class PinchZoomHandler {
             if scale.isNaN || scale == CGFloat.infinity || CGFloat.nan == initialRect.size.width {
                 return
             }
-
+            
             zoomImageView.frame = CGRect(x: zoomImageView.frame.origin.x,
                                          y: zoomImageView.frame.origin.y,
                                          width: min(max(initialRect.size.width * newScale, initialRect.size.width * minZoomScale), initialRect.size.width * maxZoomScale),
@@ -210,13 +210,13 @@ fileprivate class PinchZoomHandler {
     private func resetZoom() {
         UIView.animate(withDuration: resetAnimationDuration, animations: {
             self.zoomImageView.frame = self.initialRect
-        }) { _ in
+        }, completion: { _ in
             self.zoomImageView.removeFromSuperview()
             self.sourceImageView?.alpha = 1.0
             self.initialRect = .zero
             self.lastTouchPoint = .zero
             self.isZoomingActive = false
             self.delegate?.pinchZoomHandlerEndPinching()
-        }
+        })
     }
 }

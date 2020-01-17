@@ -44,9 +44,7 @@ public final class ImageSliderViewPresenter {
         return Int(view.scrollViewContentOffsetXPos/view.scrollViewWidth)
     }
 
-    lazy public var presentedImageUrls: [String] = {
-        return manipulateImageUrls(imageUrls)
-    }()
+    public lazy var presentedImageUrls: [String] = manipulateImageUrls(imageUrls)
 
     // MARK: Private Helper Methods
     private func manipulateImageUrls(_ imageUrls: [String]) -> [String] {

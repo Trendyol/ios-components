@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public typealias Completion<T> = (Result<T, APIClientError>) -> Void where T: Decodable
+public typealias Completion<T: Decodable> = (Result<T, APIClientError>) -> Void
 
 public protocol NetworkProtocol {
     associatedtype EndpointItem: Endpoint
