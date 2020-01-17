@@ -29,7 +29,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(64.0)
+        return 64.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -39,14 +39,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension HomeViewController {
     enum Component: Int, CaseIterable {
-        case ImageSlider = 0
-        case PinchableImageView
+        case imageSlider
+        case pinchableImageView
         
         var title: String {
             switch self {
-            case .ImageSlider:
+            case .imageSlider:
                 return "ImageSlider"
-            case .PinchableImageView:
+            case .pinchableImageView:
                 return "PinchableImageView"
             }
         }
@@ -54,7 +54,6 @@ extension HomeViewController {
         var associatedDemoViewController: UIViewController {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             return storyboard.instantiateViewController(withIdentifier: self.title)
-            
         }
     }
 }
