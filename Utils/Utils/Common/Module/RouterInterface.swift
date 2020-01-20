@@ -35,7 +35,7 @@ extension RouterInterface {
     
     public func showAlert(title: String, message: String, actions: [UIAlertAction]) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        actions.forEach({ alertController.addAction($0) })
+        actions.forEach { alertController.addAction($0) }
         navigationController?.present(alertController, animated: true, completion: nil)
     }
 }
@@ -43,6 +43,6 @@ extension RouterInterface {
 public enum DefaultAlertAction {
     case pop(Bool)
     case dismiss(Bool)
-    case custom(() -> ())
+    case custom(() -> Void)
     case none
 }

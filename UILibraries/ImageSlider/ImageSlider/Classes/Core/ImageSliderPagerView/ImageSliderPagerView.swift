@@ -20,9 +20,7 @@ private extension ImageSliderPagerView {
 }
 
 final class ImageSliderPagerView: UIView {
-    lazy var pageControl: UIPageControl = {
-        return UIPageControl()
-    }()
+    lazy var pageControl = UIPageControl()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
