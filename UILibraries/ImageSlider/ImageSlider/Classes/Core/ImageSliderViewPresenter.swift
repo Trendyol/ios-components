@@ -64,7 +64,7 @@ public final class ImageSliderViewPresenter {
     private func handleLoopingAfterDeceleration() {
         guard loopingEnabled else { return }
         guard let view = view, imageUrls.count > 1 else { return }
-
+        
         if innerPageIndex == 0 {
             let destinationIndex = imageUrls.count
             let destinationWidth = view.scrollViewWidth * Double(destinationIndex)
@@ -102,12 +102,13 @@ extension ImageSliderViewPresenter: ImageSliderViewPresenterInterface {
         view?.reloadCollectionView()
         view?.prepareSubviews()
 
-        if let view = view {
-            if loopingEnabled {
-                view.scroll(to: view.scrollViewWidth, animate: false)
-            }
-            view.preparePageControl(numberOfPages: imageUrls.count)
-            view.setPager(to: 0)
+        guard let view = view else { return }
+        
+        if loopingEnabled {
+            view.scroll(to: view.scrollViewWidth, animate: false)
         }
+        
+        view.preparePageControl(numberOfPages: imageUrls.count)
+        view.setPager(to: 0)
     }
 }
