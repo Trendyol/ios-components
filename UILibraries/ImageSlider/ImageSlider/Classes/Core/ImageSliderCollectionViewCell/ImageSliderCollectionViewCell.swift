@@ -15,7 +15,7 @@ protocol ImageSliderCollectionViewCellInterface: class {
 }
 
 final class ImageSliderCollectionViewCell: UICollectionViewCell {
-    lazy var contentImageView: PinchableImageView = {
+    private (set) lazy var contentImageView: PinchableImageView = {
         let imageView = PinchableImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
