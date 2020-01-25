@@ -49,13 +49,6 @@ open class PinchableImageView: UIImageView {
         }
     }
     
-    // True when pinching active
-    public var isZoomingActive: Bool {
-        get {
-            return pinchZoomHandler.isZoomingActive
-        } set { }
-    }
-    
     // MARK: Private Initializations
     
     override public init(frame: CGRect) {
@@ -96,7 +89,6 @@ private struct PinchZoomHandlerConstants {
     fileprivate static let kMinZoomScaleDefaultValue: CGFloat = 1.0
     fileprivate static let kMaxZoomScaleDefaultValue: CGFloat = 3.0
     fileprivate static let kResetAnimationDurationDefaultValue = 0.3
-    fileprivate static let kIsZoomingActiveDefaultValue: Bool = false
 }
 
 fileprivate class PinchZoomHandler {
@@ -105,7 +97,7 @@ fileprivate class PinchZoomHandler {
     var minZoomScale: CGFloat = PinchZoomHandlerConstants.kMinZoomScaleDefaultValue
     var maxZoomScale: CGFloat = PinchZoomHandlerConstants.kMaxZoomScaleDefaultValue
     var resetAnimationDuration = PinchZoomHandlerConstants.kResetAnimationDurationDefaultValue
-    var isZoomingActive: Bool = PinchZoomHandlerConstants.kIsZoomingActiveDefaultValue
+    
     weak var delegate: ZoomingDelegate?
     weak var sourceImageView: UIImageView?
     
@@ -114,6 +106,8 @@ fileprivate class PinchZoomHandler {
     private var zoomImageLastPosition: CGPoint = CGPoint.zero
     private var lastTouchPoint: CGPoint = CGPoint.zero
     private var lastNumberOfTouch: Int?
+    
+    private var isZoomingActive: Bool = false
     
     // MARK: Initialization
     
@@ -133,13 +127,11 @@ fileprivate class PinchZoomHandler {
     }
     
     @objc private func handlePinchGesture(pinch: UIPinchGestureRecognizer) {
-        
         guard let pinchableImageView = sourceImageView else { return }
         handlePinchMovement(pinchGesture: pinch, sourceImageView: pinchableImageView)
     }
     
     private func handlePinchMovement(pinchGesture: UIPinchGestureRecognizer, sourceImageView: UIImageView) {
-        
         switch pinchGesture.state {
         case .began:
             
