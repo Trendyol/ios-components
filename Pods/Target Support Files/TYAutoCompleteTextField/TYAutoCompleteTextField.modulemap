@@ -1,0 +1,6 @@
+framework module TYAutoCompleteTextField {
+  umbrella header "TYAutoCompleteTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}

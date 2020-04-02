@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GoJ-kO-Mgs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GoJ-kO-Mgs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -190,6 +190,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fe9-Vq-q2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1404" y="133"/>
+        </scene>
+        <!--Auto Complete Text Field View Controller-->
+        <scene sceneID="Hsc-jG-vae">
+            <objects>
+                <viewController storyboardIdentifier="autoCompleteTextField" id="GSY-kc-N86" customClass="AutoCompleteTextFieldViewController" customModule="ComponentsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C1F-b9-da9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-St-Uue" customClass="AutoCompleteTextField" customModule="TYAutoCompleteTextField">
+                                <rect key="frame" x="20" y="94" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1uK-zd-ljH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z6v-St-Uue" firstAttribute="top" secondItem="ivH-JK-CjE" secondAttribute="top" constant="50" id="LBb-u3-Xrc"/>
+                            <constraint firstItem="Z6v-St-Uue" firstAttribute="leading" secondItem="ivH-JK-CjE" secondAttribute="leading" constant="20" id="LaU-dw-oQd"/>
+                            <constraint firstItem="ivH-JK-CjE" firstAttribute="trailing" secondItem="Z6v-St-Uue" secondAttribute="trailing" constant="20" id="wYV-yC-taF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ivH-JK-CjE"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="Z6v-St-Uue" id="23q-Bg-cxo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vg7-TS-EHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2184" y="806"/>
         </scene>
     </scenes>
     <resources>
