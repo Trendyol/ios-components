@@ -11,16 +11,7 @@
       location = "group:ComponentsTestApp/ComponentsTestApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Package.swift">
-   </FileRef>
-   <FileRef
       location = "group:LICENSE">
-   </FileRef>
-   <FileRef
-      location = "group:Utils/Utils.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:API/API.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
