@@ -21,7 +21,7 @@ public extension Encodable {
             encoder.outputFormatting = .sortedKeys
         }
         guard let data = try? encoder.encode(self),
-        let jsonString  = String(data: data, encoding: .utf8) else { return nil }
+        let jsonString = String(data: data, encoding: .utf8) else { return nil }
         return jsonString
     }
 }

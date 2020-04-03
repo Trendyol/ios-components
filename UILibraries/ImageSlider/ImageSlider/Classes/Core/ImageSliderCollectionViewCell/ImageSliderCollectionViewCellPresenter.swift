@@ -20,8 +20,8 @@ final class ImageSliderCollectionViewCellPresenter {
     private weak var view: ImageSliderCollectionViewCellInterface?
 
     init(imageUrl: String, view: ImageSliderCollectionViewCellInterface?) {
-        self.view = view
         self.imageUrl = imageUrl
+        self.view = view
     }
 }
 

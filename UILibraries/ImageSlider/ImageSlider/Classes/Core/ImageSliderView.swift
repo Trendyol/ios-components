@@ -45,9 +45,7 @@ public final class ImageSliderView: UIView {
         return collection
     }()
     
-    private lazy var pager: ImageSliderPagerView = {
-        return ImageSliderPagerView(frame: .zero)
-    }()
+    private lazy var pager = ImageSliderPagerView(frame: .zero)
     
     private lazy var thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
@@ -116,7 +114,8 @@ extension ImageSliderView: ImageSliderViewInterface {
     }
 
     public func scroll(to xOffset: Double, animate: Bool) {
-        collectionView.setContentOffset(CGPoint(x: CGFloat(xOffset), y: collectionView.contentOffset.y), animated: animate)
+        let offset = CGPoint(x: CGFloat(xOffset), y: collectionView.contentOffset.y)
+        collectionView.setContentOffset(offset, animated: animate)
     }
 
     public var scrollViewContentOffsetXPos: Double {

@@ -15,7 +15,7 @@ class BlockTapGesture: UITapGestureRecognizer {
         super.init(target: target, action: action)
     }
 
-    public convenience init (tapCount: Int = 1, fingerCount: Int = 1, action: ((UITapGestureRecognizer) -> Void)?) {
+    public convenience init(tapCount: Int = 1, fingerCount: Int = 1, action: ((UITapGestureRecognizer) -> Void)?) {
         self.init()
         self.numberOfTapsRequired = tapCount
         self.numberOfTouchesRequired = fingerCount
@@ -23,7 +23,7 @@ class BlockTapGesture: UITapGestureRecognizer {
         self.addTarget(self, action: #selector(BlockTapGesture.didTap(_:)))
     }
 
-    @objc open func didTap (_ tap: UITapGestureRecognizer) {
-        tapAction? (tap)
+    @objc open func didTap(_ tap: UITapGestureRecognizer) {
+        tapAction?(tap)
     }
 }
