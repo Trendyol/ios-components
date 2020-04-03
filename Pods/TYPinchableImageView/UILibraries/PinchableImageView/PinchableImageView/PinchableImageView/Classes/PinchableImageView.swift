@@ -14,7 +14,7 @@ open class PinchableImageView: UIImageView {
     
     // Public Configurables
     
-    var zoomDelegate: ZoomingDelegate? {
+    public var zoomDelegate: ZoomingDelegate? {
         get {
             return pinchZoomHandler.delegate
         } set {
@@ -23,7 +23,7 @@ open class PinchableImageView: UIImageView {
     }
     
     // Minimum Scale of ImageView
-    var minZoomScale: CGFloat {
+    public var minZoomScale: CGFloat {
         get {
             return pinchZoomHandler.minZoomScale
         } set {
@@ -32,7 +32,7 @@ open class PinchableImageView: UIImageView {
     }
     
     // Maximum Scale of ImageView
-    var maxZoomScale: CGFloat {
+    public var maxZoomScale: CGFloat {
         get {
             return pinchZoomHandler.maxZoomScale
         } set {
@@ -41,7 +41,7 @@ open class PinchableImageView: UIImageView {
     }
     
     // Duration of finish animation
-    var resetAnimationDuration: Double {
+    public var resetAnimationDuration: Double {
         get {
             return pinchZoomHandler.resetAnimationDuration
         } set {
@@ -50,7 +50,7 @@ open class PinchableImageView: UIImageView {
     }
     
     // True when pinching active
-    var isZoomingActive: Bool {
+    public var isZoomingActive: Bool {
         get {
             return pinchZoomHandler.isZoomingActive
         } set { }
@@ -58,19 +58,19 @@ open class PinchableImageView: UIImageView {
     
     // MARK: Private Initializations
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
         commonInit()
     }
     
-    override init(image: UIImage?, highlightedImage: UIImage?) {
+    override public init(image: UIImage?, highlightedImage: UIImage?) {
         super.init(image: image, highlightedImage: highlightedImage)
         
         commonInit()
     }
     
-    override init(image: UIImage?) {
+    override public init(image: UIImage?) {
         super.init(image: image)
         
         commonInit()

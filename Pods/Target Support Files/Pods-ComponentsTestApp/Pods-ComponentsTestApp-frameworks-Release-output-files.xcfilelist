@@ -1,2 +1,3 @@
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYAutoCompleteTextField.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYPinchableImageView.framework

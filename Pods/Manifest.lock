@@ -1,11 +1,13 @@
 PODS:
-  - SDWebImage (5.4.2):
-    - SDWebImage/Core (= 5.4.2)
-  - SDWebImage/Core (5.4.2)
-  - TYPinchableImageView (0.0.1)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
+  - TYAutoCompleteTextField (0.0.1)
+  - TYPinchableImageView (0.0.3)
 
 DEPENDENCIES:
   - SDWebImage
+  - TYAutoCompleteTextField (from `/Users/anil/repos/ios-components`)
   - TYPinchableImageView
 
 SPEC REPOS:
@@ -13,10 +15,15 @@ SPEC REPOS:
     - SDWebImage
     - TYPinchableImageView
 
-SPEC CHECKSUMS:
-  SDWebImage: 4ca2dc4eefae4224bea8f504251cda485a363745
-  TYPinchableImageView: f525f464ba9921337e0fa991ed23e63e77823bd0
+EXTERNAL SOURCES:
+  TYAutoCompleteTextField:
+    :path: "/Users/anil/repos/ios-components"
 
-PODFILE CHECKSUM: 3878f0b8ecc4ffbcddd768bc19ff3cc1e3a2ad25
+SPEC CHECKSUMS:
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
+  TYAutoCompleteTextField: d89b388572095e5dac8c5fa318b48b35af03c561
+  TYPinchableImageView: 43428dfafebab0c85129aa40313691f845d9d3d0
+
+PODFILE CHECKSUM: 84fe34e0fe32cea0c784837c6b7052ae7574ed79
 
 COCOAPODS: 1.8.4
