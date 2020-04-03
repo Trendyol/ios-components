@@ -2,21 +2,25 @@ PODS:
   - SDWebImage (5.4.2):
     - SDWebImage/Core (= 5.4.2)
   - SDWebImage/Core (5.4.2)
+  - TYAutoCompleteTextField (0.0.1)
   - TYPinchableImageView (0.0.1)
 
 DEPENDENCIES:
   - SDWebImage
+  - TYAutoCompleteTextField
   - TYPinchableImageView
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - TYAutoCompleteTextField
     - TYPinchableImageView
 
 SPEC CHECKSUMS:
   SDWebImage: 4ca2dc4eefae4224bea8f504251cda485a363745
+  TYAutoCompleteTextField: d89b388572095e5dac8c5fa318b48b35af03c561
   TYPinchableImageView: f525f464ba9921337e0fa991ed23e63e77823bd0
 
-PODFILE CHECKSUM: 3878f0b8ecc4ffbcddd768bc19ff3cc1e3a2ad25
+PODFILE CHECKSUM: 172995e306618f2b2082e5990061a0f181dd4182
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

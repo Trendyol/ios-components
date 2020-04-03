@@ -9,6 +9,7 @@ target 'ComponentsTestApp' do
     inherit! :search_paths
     pod 'SDWebImage'
     pod 'TYPinchableImageView'
+    pod 'TYAutoCompleteTextField'
 end
 
 target 'ImageSlider' do

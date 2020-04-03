@@ -41,13 +41,13 @@ extension HomeViewController {
     enum Component: Int, CaseIterable {
         case imageSlider
         case pinchableImageView
+        case autoCompleteTextField
         
         var title: String {
             switch self {
-            case .imageSlider:
-                return "ImageSlider"
-            case .pinchableImageView:
-                return "PinchableImageView"
+            case .imageSlider: return "ImageSlider"
+            case .pinchableImageView: return "PinchableImageView"
+            case .autoCompleteTextField: return "autoCompleteTextField"
             }
         }
         
