@@ -29,7 +29,6 @@ open class AutoCompleteTextField: UITextField {
     open var completionValues: [String] = defaultDomains
     open var autoCompleteType: ATAutoCompleteType = .email {
         didSet {
-            
             if autoCompleteType == .email {
                 keyboardType = .emailAddress
                 autocorrectionType = .no
@@ -37,9 +36,14 @@ open class AutoCompleteTextField: UITextField {
             }
         }
     }
-    public var autoCompletionTextColor: UIColor = .completionGray {
+    open var autoCompletionTextColor: UIColor = .completionGray {
         didSet {
             autoCompleteLabel.textColor = autoCompletionTextColor
+        }
+    }
+    open var autoCompletionFont: UIFont = .init() {
+        didSet {
+            autoCompleteLabel.font = autoCompletionFont
         }
     }
     
