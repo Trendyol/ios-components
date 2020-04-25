@@ -27,4 +27,16 @@ final class PropertyWrapperTests: XCTestCase {
         let response = try! JSONDecoder().decode(OrderResponse.self, from: jsonData)
         XCTAssertEqual(response.status, OrderStatus.new)
     }
+    
+    func test_EmptyFieldOnOrderResponse_ShouldShowOrderStatusShouldBeTrue() {
+        let jsonData = #"{ }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(OrderResponse.self, from: jsonData)
+        XCTAssertTrue(response.shouldShowOrderStatus)
+    }
+    
+    func test_EmptyFieldOnUserResponse_IsAdminShouldBeFalse() {
+        let jsonData = #"{ }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(UserResponse.self, from: jsonData)
+        XCTAssertFalse(response.isAdmin)
+    }
 }

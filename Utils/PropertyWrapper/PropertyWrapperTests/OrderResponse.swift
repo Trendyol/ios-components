@@ -9,6 +9,7 @@
 
 struct OrderResponse: Codable {
     @DefaultCodable<FirstCase> var status: OrderStatus
+    @DefaultCodable<DefaultTrue> var shouldShowOrderStatus: Bool
 }
 
 enum OrderStatus: String, EnumDefaultValueSelectable {

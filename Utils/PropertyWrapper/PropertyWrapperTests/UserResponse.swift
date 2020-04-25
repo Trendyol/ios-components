@@ -13,4 +13,5 @@ enum UserType: String, EnumDefaultValueSelectable {
 
 struct UserResponse: Codable {
     @DefaultCodable<LastCase> var user: UserType
+    @DefaultCodable<DefaultFalse> var isAdmin: Bool
 }
