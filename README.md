@@ -29,6 +29,43 @@ Provides full screen zooming ability to UIImageView like instagram.
 
 [PinchableImageView Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/PinchableImageView/)
 
+# AutoCompleteTextField
+
+[AutoCompleteTextField Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/AutoCompleteTextField)
+
+# PropertyWrapper
+
+When you need use a enum on DTO you need to be sure all types can confirm. For that you need to create custom init. With this implemantation you don't need to write custom init anymore. Also We think on DTO no need to use optional Bool. Beacuse when will be we use optional bool on our code we wrote it with default value. You can simply use DefaultTrue or DefaultFalse wrapper on your dto and if that field is nil it will be set default value.
+
+```swift
+// With this implemantation you can be sure your code can't crash when new UserType added.
+enum UserType: String, Codable {
+    case admin, user, none
+    
+    public init(from decoder: Decoder) throws {
+        self = try UserType(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .none
+    }
+}
+```
+
+```swift
+// With This Property Wrapper you can set Default value for UserType. You can set default value with LastCase or FirstCase.
+// Also With DefaultFalse or DefaultTrue you can save your code from `UserResponse.isAdmin ?? false`
+enum UserType: String, EnumDefaultValueSelectable {
+    case admin, user, none
+}
+
+struct UserResponse: Codable {
+    @DefaultCodable<LastCase> var user: UserType
+    @DefaultCodable<DefaultFalse> var isAdmin: Bool
+}
+
+```
+
+[PropertyWrapper Link](https://github.com/Trendyol/ios-components/tree/master/Utils/PropertyWrapper)
+
+
+
 
 License
 --------
