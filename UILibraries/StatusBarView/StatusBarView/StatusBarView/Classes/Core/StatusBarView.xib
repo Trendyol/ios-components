@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusBarView" customModule="StatusBarView" customModuleProvider="target">
+            <connections>
+                <outlet property="linesStackView" destination="sK2-HO-Vzz" id="nEz-VV-iYd"/>
+                <outlet property="linesStackViewLeadingConstraint" destination="RAK-0b-lHx" id="ArG-hd-Z0M"/>
+                <outlet property="linesStackViewTrailingConstraint" destination="kio-rn-dp6" id="hwy-9M-M62"/>
+                <outlet property="statusesStackView" destination="TU5-Hp-cbz" id="sPE-yE-Tla"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ic2-9z-Ynk">
+            <rect key="frame" x="0.0" y="0.0" width="590" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtY-qe-LLt">
+                    <rect key="frame" x="15" y="15" width="560" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sK2-HO-Vzz" userLabel="Lines Stack View">
+                            <rect key="frame" x="0.0" y="9" width="560" height="2"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="z9U-QE-I1V"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TU5-Hp-cbz" userLabel="Statuses Stack View">
+                            <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="TU5-Hp-cbz" firstAttribute="top" secondItem="dtY-qe-LLt" secondAttribute="top" id="1XV-3O-MSb"/>
+                        <constraint firstAttribute="height" constant="60" id="8cd-nn-T68"/>
+                        <constraint firstItem="TU5-Hp-cbz" firstAttribute="leading" secondItem="dtY-qe-LLt" secondAttribute="leading" id="Gb0-VE-xg7"/>
+                        <constraint firstItem="sK2-HO-Vzz" firstAttribute="top" secondItem="dtY-qe-LLt" secondAttribute="top" constant="9" id="QbJ-5R-VCT"/>
+                        <constraint firstItem="sK2-HO-Vzz" firstAttribute="leading" secondItem="dtY-qe-LLt" secondAttribute="leading" id="RAK-0b-lHx"/>
+                        <constraint firstAttribute="bottom" secondItem="TU5-Hp-cbz" secondAttribute="bottom" id="VSg-wV-DmA"/>
+                        <constraint firstAttribute="trailing" secondItem="sK2-HO-Vzz" secondAttribute="trailing" id="kio-rn-dp6"/>
+                        <constraint firstItem="TU5-Hp-cbz" firstAttribute="trailing" secondItem="dtY-qe-LLt" secondAttribute="trailing" id="y48-jV-fy2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dtY-qe-LLt" firstAttribute="centerX" secondItem="uea-T8-Fg5" secondAttribute="centerX" id="9Wf-rW-lUz"/>
+                <constraint firstItem="dtY-qe-LLt" firstAttribute="top" secondItem="ic2-9z-Ynk" secondAttribute="top" constant="15" id="9kB-2T-rCa"/>
+                <constraint firstItem="dtY-qe-LLt" firstAttribute="leading" secondItem="ic2-9z-Ynk" secondAttribute="leading" constant="15" id="nm4-6s-Bbd"/>
+                <constraint firstAttribute="bottom" secondItem="dtY-qe-LLt" secondAttribute="bottom" constant="7" id="rkg-OI-xXm"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="uea-T8-Fg5"/>
+            <point key="canvasLocation" x="273.91304347826087" y="41.852678571428569"/>
+        </view>
+    </objects>
+</document>

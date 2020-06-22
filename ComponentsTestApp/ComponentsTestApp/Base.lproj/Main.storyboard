@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GoJ-kO-Mgs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GoJ-kO-Mgs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -223,6 +223,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vg7-TS-EHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2184" y="806"/>
+        </scene>
+        <!--Status Bar Demo View Controller-->
+        <scene sceneID="sUt-Wf-Rga">
+            <objects>
+                <viewController storyboardIdentifier="StatusBarView" id="dNl-s0-K8h" customClass="StatusBarDemoViewController" customModule="ComponentsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RPu-7T-Mym">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgb-tb-mro" customClass="StatusBarView" customModule="StatusBarView">
+                                <rect key="frame" x="20" y="103" width="374" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="H7Q-8X-bur"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uqn-BO-wzc" firstAttribute="trailing" secondItem="Xgb-tb-mro" secondAttribute="trailing" constant="20" id="00w-DJ-72k"/>
+                            <constraint firstItem="Xgb-tb-mro" firstAttribute="top" secondItem="uqn-BO-wzc" secondAttribute="top" constant="59" id="dYP-u3-Xs7"/>
+                            <constraint firstItem="Xgb-tb-mro" firstAttribute="leading" secondItem="uqn-BO-wzc" secondAttribute="leading" constant="20" id="oqH-bs-VDY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uqn-BO-wzc"/>
+                    </view>
+                    <connections>
+                        <outlet property="statusBarView" destination="Xgb-tb-mro" id="UEE-r3-BG9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="679-WF-7b9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.5507246376815" y="805.58035714285711"/>
         </scene>
     </scenes>
     <resources>
