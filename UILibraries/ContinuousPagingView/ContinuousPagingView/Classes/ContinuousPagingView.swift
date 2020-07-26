@@ -22,7 +22,7 @@ public protocol ContinuousPagingViewDelegate: class {
     func continuousPagingVieWscrollViewWillBeginDragging()
 }
 
-extension ContinuousPagingViewDelegate {
+public extension ContinuousPagingViewDelegate {
     func continuousPagingViewDidEndDecelerating(page: Int) { }
     func continuousPagingViewDidScroll() { }
     func continuousPagingViewWillDisplay(cell: UICollectionViewCell, at indexPath: IndexPath) { }
@@ -56,7 +56,10 @@ public final class ContinuousPagingView: UIView {
     private var oldOffsetX: CGFloat = 0
     
     public lazy var collectionView: UICollectionView = {
-        let collection = UICollectionView(frame: .zero)
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collection.backgroundColor = .clear
         collection.delegate = self
         collection.dataSource = self
         return collection
