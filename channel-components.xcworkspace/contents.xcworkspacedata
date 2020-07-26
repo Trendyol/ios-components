@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:UILibraries/ContinuousPagingView/ContinuousPagingView.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Utils/PropertyWrapper/PropertyWrapper.xcodeproj">
    </FileRef>
    <FileRef
