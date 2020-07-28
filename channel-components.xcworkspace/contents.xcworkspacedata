@@ -5,6 +5,9 @@
       location = "group:UILibraries/StatusBarView/StatusBarView/StatusBarView.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:UILibraries/ContinuousPagingView/ContinuousPagingView.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Utils/PropertyWrapper/PropertyWrapper.xcodeproj">
    </FileRef>
    <FileRef
