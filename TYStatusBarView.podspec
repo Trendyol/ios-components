@@ -2,8 +2,8 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios
   spec.ios.deployment_target = '11.0'
-  spec.name         = "StatusBarView"
-  spec.summary      = "StatusBarView is a custom view to show status progress by indicating the last active index."
+  spec.name         = "TYStatusBarView"
+  spec.summary      = "TYStatusBarView is a custom view to show status progress by indicating the last active index."
   spec.version      = "0.0.1"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.authors      = "DSM Group Trendyol"
