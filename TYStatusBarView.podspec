@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
     :tag => 'StatusBarView-' + spec.version.to_s
   }
 
-  spec.source_files  = "UILibraries/StatusBarView/StatusBarView/Classes/**/*.swift"
+  spec.source_files  = "UILibraries/StatusBarView/StatusBarView/StatusBarView/Classes/**/*.swift"
   spec.swift_version = ['4.2', '5.0', '5.1']
 
 end
