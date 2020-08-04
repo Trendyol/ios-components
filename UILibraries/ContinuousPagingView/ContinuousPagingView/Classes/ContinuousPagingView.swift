@@ -62,7 +62,7 @@ public final class ContinuousPagingView: UIView {
         collection.backgroundColor = .clear
         collection.delegate = self
         collection.dataSource = self
-        collection.isPagingEnabled = true
+        collection.decelerationRate = .fast
         return collection
     }()
     
