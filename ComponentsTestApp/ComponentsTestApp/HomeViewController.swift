@@ -42,12 +42,14 @@ extension HomeViewController {
         case imageSlider
         case pinchableImageView
         case autoCompleteTextField
+        case statusBarView
         
         var title: String {
             switch self {
             case .imageSlider: return "ImageSlider"
             case .pinchableImageView: return "PinchableImageView"
             case .autoCompleteTextField: return "autoCompleteTextField"
+            case .statusBarView: return "StatusBarView"
             }
         }
         

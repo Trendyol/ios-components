@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0400CB3A2436255F00C215D9 /* AutoCompleteTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400CB392436255F00C215D9 /* AutoCompleteTextFieldViewController.swift */; };
+		599EFBFE246046FB0079C27D /* StatusBarDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EFBFD246046FB0079C27D /* StatusBarDemoViewController.swift */; };
+		599EFC0024604FFB0079C27D /* StatusBarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599EFBFF24604FFB0079C27D /* StatusBarView.framework */; };
+		599EFC0124604FFB0079C27D /* StatusBarView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 599EFBFF24604FFB0079C27D /* StatusBarView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		674E2D8023CC945300829394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2D7F23CC945300829394 /* AppDelegate.swift */; };
 		674E2D8223CC945300829394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E2D8123CC945300829394 /* SceneDelegate.swift */; };
 		674E2D8723CC945300829394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674E2D8523CC945300829394 /* Main.storyboard */; };
@@ -31,6 +34,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				67B1652123CD97F400651817 /* PinchableImageView.framework in Embed Frameworks */,
+				599EFC0124604FFB0079C27D /* StatusBarView.framework in Embed Frameworks */,
 				674E2DBE23CC96C800829394 /* ImageSlider.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -41,6 +45,8 @@
 /* Begin PBXFileReference section */
 		0400CB392436255F00C215D9 /* AutoCompleteTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextFieldViewController.swift; sourceTree = "<group>"; };
 		2B743E5AF8340412D57B9594 /* Pods-ComponentsTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsTestApp.debug.xcconfig"; path = "Target Support Files/Pods-ComponentsTestApp/Pods-ComponentsTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		599EFBFD246046FB0079C27D /* StatusBarDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarDemoViewController.swift; sourceTree = "<group>"; };
+		599EFBFF24604FFB0079C27D /* StatusBarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StatusBarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674E2D7C23CC945300829394 /* ComponentsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		674E2D7F23CC945300829394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		674E2D8123CC945300829394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 				674E2DBD23CC96C800829394 /* ImageSlider.framework in Frameworks */,
 				67B1652023CD97F400651817 /* PinchableImageView.framework in Frameworks */,
 				8579E9119F04FFD35A28A7AA /* Pods_ComponentsTestApp.framework in Frameworks */,
+				599EFC0024604FFB0079C27D /* StatusBarView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +115,7 @@
 		674E2DBB23CC96C800829394 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				599EFBFF24604FFB0079C27D /* StatusBarView.framework */,
 				67B1651F23CD97F400651817 /* PinchableImageView.framework */,
 				67914CBD23CCD9B1000AFE6A /* SDWebImage.framework */,
 				674E2DBC23CC96C800829394 /* ImageSlider.framework */,
@@ -122,6 +130,7 @@
 				67B1652923CDD4D800651817 /* PinchableImageViewDemoViewController.swift */,
 				67B1652B23CDD67E00651817 /* ImageSliderDemoViewController.swift */,
 				0400CB392436255F00C215D9 /* AutoCompleteTextFieldViewController.swift */,
+				599EFBFD246046FB0079C27D /* StatusBarDemoViewController.swift */,
 			);
 			path = LibraryDemoViewControllers;
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599EFBFE246046FB0079C27D /* StatusBarDemoViewController.swift in Sources */,
 				674E2D8023CC945300829394 /* AppDelegate.swift in Sources */,
 				67B1652C23CDD67E00651817 /* ImageSliderDemoViewController.swift in Sources */,
 				67B1652A23CDD4D800651817 /* PinchableImageViewDemoViewController.swift in Sources */,
