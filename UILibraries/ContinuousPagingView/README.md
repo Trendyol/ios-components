@@ -21,11 +21,11 @@ For example, if you have 7 items, and you want to display 3 cells at each page, 
 Examples;
 
 
-Total: 9 item, 5 item per page;
+Total: 9 items, 5 item per page;
 ----
 ![](https://s7.gifyu.com/images/scroll_first.gif)
 
-Total: 6 item, 5 item per page;
+Total: 6 items, 5 item per page;
 ----
 ![](https://s7.gifyu.com/images/scroll_second.gif)
 ## <br/>Setup
