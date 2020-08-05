@@ -65,6 +65,10 @@ struct UserResponse: Codable {
 [PropertyWrapper Link](https://github.com/Trendyol/ios-components/tree/master/Utils/PropertyWrapper)
 
 
+# ContinuousPagingView
+Custom collection view with pagination implementation, guarantees that all pages filled with equal number of item.
+
+[ContinuousPagingView Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/ContinuousPagingView)
 
 
 License
