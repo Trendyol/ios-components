@@ -66,7 +66,7 @@ struct UserResponse: Codable {
 
 
 # ContinuousPagingView
-Custom collection view with pagination implementation, guarantees that all pages filled with equal number of item.
+Custom collection view with pagination implementation, guarantees that all pages filled with equal number of items.
 
 [ContinuousPagingView Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/ContinuousPagingView)
 
