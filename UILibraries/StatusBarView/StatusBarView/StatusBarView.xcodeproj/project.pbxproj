@@ -14,6 +14,8 @@
 		599EFBF824603EE00079C27D /* StatusBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599EFBF724603EE00079C27D /* StatusBarView.xib */; };
 		599EFBFA246043B50079C27D /* StatusBarItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599EFBF9246043B50079C27D /* StatusBarItemView.xib */; };
 		599EFBFC246045A90079C27D /* StatusBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EFBFB246045A90079C27D /* StatusBarItemView.swift */; };
+		5F260B1D24DDA3C800882975 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F260B1C24DDA3C800882975 /* NibView.swift */; };
+		5F260B1F24DDA3F300882975 /* LoadableNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F260B1E24DDA3F300882975 /* LoadableNib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		599EFBF724603EE00079C27D /* StatusBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusBarView.xib; sourceTree = "<group>"; };
 		599EFBF9246043B50079C27D /* StatusBarItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusBarItemView.xib; sourceTree = "<group>"; };
 		599EFBFB246045A90079C27D /* StatusBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarItemView.swift; sourceTree = "<group>"; };
+		5F260B1C24DDA3C800882975 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		5F260B1E24DDA3F300882975 /* LoadableNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableNib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +110,22 @@
 		599EFBF4246002CA0079C27D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5F3CB8C224E1353900DC8CC9 /* Helper */,
 				599EFBF5246002E80079C27D /* StatusBarView.swift */,
 				599EFBFB246045A90079C27D /* StatusBarItemView.swift */,
 				599EFBF724603EE00079C27D /* StatusBarView.xib */,
 				599EFBF9246043B50079C27D /* StatusBarItemView.xib */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		5F3CB8C224E1353900DC8CC9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5F260B1C24DDA3C800882975 /* NibView.swift */,
+				5F260B1E24DDA3F300882975 /* LoadableNib.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				599EFBF6246002E80079C27D /* StatusBarView.swift in Sources */,
+				5F260B1F24DDA3F300882975 /* LoadableNib.swift in Sources */,
 				599EFBFC246045A90079C27D /* StatusBarItemView.swift in Sources */,
+				5F260B1D24DDA3C800882975 /* NibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

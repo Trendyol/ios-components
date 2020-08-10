@@ -14,22 +14,11 @@ extension StatusBarView {
     }
 }
 
-public class StatusBarView: UIView {
+public class StatusBarView: NibView {
     @IBOutlet private weak var statusesStackView: UIStackView!
     @IBOutlet private weak var linesStackView: UIStackView!
     @IBOutlet private weak var linesStackViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet private weak var linesStackViewTrailingConstraint: NSLayoutConstraint!
-    private weak var containerView: UIView!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
     
     /**
     Configures the view with the given parameters.
@@ -46,6 +35,7 @@ public class StatusBarView: UIView {
                           passiveColor: UIColor = .systemGray) {
         removeAllSubviews(of: statusesStackView)
         removeAllSubviews(of: linesStackView)
+        guard !titles.isEmpty else { return }
         
         var isLastActiveItem = false
         for (index, title) in titles.enumerated() {
@@ -64,7 +54,6 @@ public class StatusBarView: UIView {
                 isLastActiveItem = true
             }
         }
-        guard titles.count > 0 else { return }
         
         let statusesWidth = bounds.width - (CGFloat(titles.count - 1) * statusesStackView.spacing)
         let linesSpacing = (statusesWidth / CGFloat(titles.count)) / 2
@@ -73,30 +62,6 @@ public class StatusBarView: UIView {
     }
     
     // MARK: - Private
-    private func setup() {
-        backgroundColor = UIColor.clear
-        let nibView = loadNib()
-        containerView = nibView
-        containerView.frame = bounds
-        addSubview(containerView)
-
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": nibView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": nibView]))
-    }
-    
-    private func loadNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nibName = type(of: self).description().components(separatedBy: ".").last!
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as! UIView
-    }
     
     private func removeAllSubviews(of stackView: UIStackView) {
         for subview in stackView.arrangedSubviews {
