@@ -25,6 +25,7 @@ public class NibView: UIView, LoadableNib {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: className, bundle: bundle)
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
+        
         view.backgroundColor = .clear
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
