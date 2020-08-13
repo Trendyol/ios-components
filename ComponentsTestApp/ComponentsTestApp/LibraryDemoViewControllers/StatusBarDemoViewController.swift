@@ -10,13 +10,12 @@ import StatusBarView
 import UIKit
 
 final class StatusBarDemoViewController: UIViewController {
-    
     @IBOutlet private weak var statusBarView: StatusBarView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "StatusBarView"
-        
+
         let titles = [
             "Received",
             "Preparing",
