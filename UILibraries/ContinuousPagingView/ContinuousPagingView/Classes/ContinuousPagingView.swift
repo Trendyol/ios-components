@@ -45,16 +45,16 @@ public final class ContinuousPagingView: UIView {
     public var interItemSpacing: CGFloat = 15
     public var useInterItemSpacingForLeftAndRightInsets = false
     public var showsHorizontalScrollIndicator = true
-    
+
     // MARK: - Public Delegate & DataSource
     public weak var dataSource: ContinuousPagingViewDataSource?
     public weak var delegate: ContinuousPagingViewDelegate?
-    
+
     // MARK: - Private Variables
     private(set) var currentPage = 0
     private var pageOffsets: [Int: CGFloat] = [:]
     private var oldOffsetX: CGFloat = 0
-    
+
     public lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -65,24 +65,24 @@ public final class ContinuousPagingView: UIView {
         collection.decelerationRate = .fast
         return collection
     }()
-    
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
         prepareCollectionView()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         prepareCollectionView()
     }
-    
+
     public override func layoutSubviews() {
         super.layoutSubviews()
         preparePageOffsets()
         collectionView.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
         collectionView.layer.masksToBounds = false
     }
-    
+
     private func prepareCollectionView() {
         addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -93,7 +93,7 @@ public final class ContinuousPagingView: UIView {
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
+
     private func preparePageOffsets() {
         pageOffsets.removeAll()
         for page in 0..<numberOfPages {
@@ -107,31 +107,29 @@ public final class ContinuousPagingView: UIView {
             }
         }
     }
-    
+
     private var pageWidth: CGFloat {
-        if useInterItemSpacingForLeftAndRightInsets {
-            return frame.width - 2*interItemSpacing
-        } else {
-            return frame.width
-        }
+        return useInterItemSpacingForLeftAndRightInsets
+            ? frame.width - 2 * interItemSpacing
+            : frame.width
     }
-    
+
     private var cellSize: CGSize {
         let numberOfInterSpaces = numberOfItemsPerPage - 1
         let interSpaceWidthPerPage = CGFloat(numberOfInterSpaces) * CGFloat(interItemSpacing)
-        let cellWidth = (pageWidth - interSpaceWidthPerPage)/CGFloat(numberOfItemsPerPage)
+        let cellWidth = (pageWidth - interSpaceWidthPerPage) / CGFloat(numberOfItemsPerPage)
         return CGSize(width: cellWidth, height: frame.height)
     }
-    
+
     private var numberOfPages: Int {
         guard let dataSource = dataSource else { return 0 }
         let result = Double(dataSource.continuousPagingViewNumberOfItems()) / Double(numberOfItemsPerPage)
         let result2 = Int(result.rounded(.up))
         return result2
     }
-    
+
     private func pageFitResult(for page: Int) -> PageFitResult {
-        guard let dataSource = dataSource else { fatalError() }
+        guard let dataSource = dataSource else { fatalError("dataSorce value nil") }
         let totalNumberOfItems = dataSource.continuousPagingViewNumberOfItems()
         let numberOfItemsOnPreviousPages = page * numberOfItemsPerPage
         let remainingItemsCount = totalNumberOfItems - numberOfItemsOnPreviousPages
@@ -141,7 +139,7 @@ public final class ContinuousPagingView: UIView {
             return .partial(missingCount: numberOfItemsPerPage - remainingItemsCount)
         }
     }
-    
+
     private func isScrollEnoughForSliding(scrollAmount: CGFloat) -> Bool {
         return scrollAmount > pageWidth * Constant.slidePageSizeFactor
     }
@@ -159,7 +157,7 @@ extension ContinuousPagingView: UICollectionViewDataSource {
         guard let dataSource = dataSource else { return 0 }
         return dataSource.continuousPagingViewNumberOfItems()
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let dataSource = dataSource else { preconditionFailure() }
         return dataSource.continuousPagingViewCellForItem(for: collectionView, at: indexPath)
@@ -170,15 +168,17 @@ extension ContinuousPagingView: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return cellSize
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return interItemSpacing
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        useInterItemSpacingForLeftAndRightInsets ? UIEdgeInsets(top: 0, left: interItemSpacing, bottom: 0, right: interItemSpacing) : UIEdgeInsets.zero
+        useInterItemSpacingForLeftAndRightInsets
+            ? UIEdgeInsets(top: 0, left: interItemSpacing, bottom: 0, right: interItemSpacing)
+            : UIEdgeInsets.zero
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         delegate?.continuousPagingViewWillDisplay(cell: cell, at: indexPath)
     }
@@ -193,7 +193,7 @@ extension ContinuousPagingView: UIScrollViewDelegate {
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         delegate?.continuousPagingViewDidEndDecelerating(page: currentPage)
     }
-    
+
     public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         delegate?.continuousPagingViewWillBeginDecelerating(page: currentPage)
     }
@@ -208,9 +208,11 @@ extension ContinuousPagingView: UIScrollViewDelegate {
 
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let direction = ScrollDirection(beginOffset: oldOffsetX, endOffset: scrollView.contentOffset.x)
-        let newPage = direction == .right ? min(currentPage.next, numberOfPages-1) : max(currentPage.previous, 0)
-        let scrollAmount = abs(scrollView.contentOffset.x-oldOffsetX)
-        
+        let newPage = direction == .right
+            ? min(currentPage.next, numberOfPages - 1)
+            : max(currentPage.previous, 0)
+        let scrollAmount = abs(scrollView.contentOffset.x - oldOffsetX)
+
         if abs(velocity.x) > Constant.swipeVelocityThreshold {
             targetContentOffset.pointee.x = pageOffsets[newPage] ?? .zero
             currentPage = newPage
@@ -225,7 +227,7 @@ extension ContinuousPagingView: UIScrollViewDelegate {
             }
         }
     }
-    
+
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.continuousPagingViewDidScroll()
     }
@@ -245,7 +247,7 @@ private extension ContinuousPagingView {
     enum ScrollDirection {
         case left
         case right
-        
+
         init(beginOffset: CGFloat, endOffset: CGFloat) {
             self = endOffset > beginOffset ? .right : .left
         }
