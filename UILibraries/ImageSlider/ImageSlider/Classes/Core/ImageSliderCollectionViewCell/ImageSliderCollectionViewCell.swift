@@ -20,29 +20,31 @@ final class ImageSliderCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    
+
     @IBOutlet private weak var someImageView: UIImageView!
-    
+
+    // swiftlint:disable implicitly_unwrapped_optional
     var presenter: ImageSliderCollectionViewCellPresenterInterface! {
         didSet {
             presenter.load()
         }
     }
-    
+    // swiftlint:enable implicitly_unwrapped_optional
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
     }
-    
+
     private func setupUI() {
         contentImageView.embedEdgeToEdge(in: self)
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         resetImage()
@@ -53,7 +55,7 @@ extension ImageSliderCollectionViewCell: ImageSliderCollectionViewCellInterface 
     func resetImage() {
         contentImageView.image = nil
     }
-    
+
     func loadImage(url: String?) {
         contentImageView.setImageWith(path: url)
     }
