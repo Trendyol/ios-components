@@ -115,8 +115,9 @@ extension ImageSliderView: ImageSliderViewInterface {
         guard let cell = collectionView.cellForItem(
             at: IndexPath(
                 row: presenter.currentInnerPageIndex,
-                section: 0)
-            ) as? ImageSliderCollectionViewCell else { return nil }
+                section: 0
+            )
+        ) as? ImageSliderCollectionViewCell else { return nil }
         return cell.contentImageView
     }
 
