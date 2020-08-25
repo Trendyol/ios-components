@@ -20,6 +20,7 @@ public protocol ContinuousPagingViewDelegate: class {
     func continuousPagingViewDidEndScrollingAnimation()
     func continuousPagingViewDidEndDragging(decelerate: Bool)
     func continuousPagingVieWscrollViewWillBeginDragging()
+    func continuousPagingViewDidSelectItem(at indexPath: IndexPath)
 }
 
 public extension ContinuousPagingViewDelegate {
@@ -30,6 +31,7 @@ public extension ContinuousPagingViewDelegate {
     func continuousPagingViewDidEndScrollingAnimation() { }
     func continuousPagingViewDidEndDragging(decelerate: Bool) { }
     func continuousPagingVieWscrollViewWillBeginDragging() {}
+    func continuousPagingViewDidSelectItem(at indexPath: IndexPath) {}
 }
 
 private extension ContinuousPagingView {
@@ -228,6 +230,10 @@ extension ContinuousPagingView: UIScrollViewDelegate {
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.continuousPagingViewDidScroll()
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.continuousPagingViewDidSelectItem(at: indexPath)
     }
 }
 
