@@ -6,6 +6,8 @@
 //  Copyright © 2020 Trendyol. All rights reserved.
 //
 
+import Foundation
+
 @propertyWrapper
 struct Capitalized {
     var wrappedValue: String {
