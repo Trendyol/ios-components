@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = '11.0'
     spec.name         = "TYContinuousPagingView"
     spec.summary      = "Preparing.."
-    spec.version      = "0.0.5"
+    spec.version      = "0.0.6"
     spec.license      = { :type => "MIT", :file => "LICENSE" }
     spec.authors      = "Emre Ergün"
     spec.homepage     = "https://www.trendyol.com"
