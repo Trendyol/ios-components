@@ -137,7 +137,7 @@ public final class ContinuousPagingView: UIView {
         let totalNumberOfItems = dataSource.continuousPagingViewNumberOfItems()
         let numberOfItemsOnPreviousPages = page * numberOfItemsPerPage
         let remainingItemsCount = totalNumberOfItems - numberOfItemsOnPreviousPages
-        if remainingItemsCount > numberOfItemsPerPage {
+        if remainingItemsCount >= numberOfItemsPerPage {
             return .full
         } else {
             return .partial(missingCount: numberOfItemsPerPage - remainingItemsCount)
