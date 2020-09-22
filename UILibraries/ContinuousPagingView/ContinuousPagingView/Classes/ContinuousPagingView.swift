@@ -17,7 +17,7 @@ public protocol ContinuousPagingViewDelegate: class {
     func continuousPagingViewDidScroll()
     func continuousPagingViewWillDisplay(cell: UICollectionViewCell, at indexPath: IndexPath)
     func continuousPagingViewWillBeginDecelerating(page: Int)
-    func continuousPagingViewDidEndScrollingAnimation()
+    func continuousPagingViewDidEndScrollingAnimation(page: Int)
     func continuousPagingViewDidEndDragging(decelerate: Bool)
     func continuousPagingVieWscrollViewWillBeginDragging()
     func continuousPagingViewDidSelectItem(at indexPath: IndexPath)
@@ -28,7 +28,7 @@ public extension ContinuousPagingViewDelegate {
     func continuousPagingViewDidScroll() { }
     func continuousPagingViewWillDisplay(cell: UICollectionViewCell, at indexPath: IndexPath) { }
     func continuousPagingViewWillBeginDecelerating(page: Int) { }
-    func continuousPagingViewDidEndScrollingAnimation() { }
+    func continuousPagingViewDidEndScrollingAnimation(page: Int) { }
     func continuousPagingViewDidEndDragging(decelerate: Bool) { }
     func continuousPagingVieWscrollViewWillBeginDragging() {}
     func continuousPagingViewDidSelectItem(at indexPath: IndexPath) {}
@@ -201,7 +201,7 @@ extension ContinuousPagingView: UIScrollViewDelegate {
     }
 
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        delegate?.continuousPagingViewDidEndScrollingAnimation()
+        delegate?.continuousPagingViewDidEndScrollingAnimation(page: currentPage)
     }
 
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
