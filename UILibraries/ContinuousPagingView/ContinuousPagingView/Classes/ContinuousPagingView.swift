@@ -37,7 +37,7 @@ public extension ContinuousPagingViewDelegate {
 private extension ContinuousPagingView {
     enum Constant {
         static let swipeVelocityThreshold: CGFloat = 0.35
-        static let slidePageSizeFactor: CGFloat = 0.35
+        static let slidePageSizeFactor: CGFloat = 0.2
     }
 }
 
