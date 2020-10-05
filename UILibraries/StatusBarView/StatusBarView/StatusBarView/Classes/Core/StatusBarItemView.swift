@@ -16,26 +16,16 @@ extension StatusBarItemView {
     }
 }
 
-public class StatusBarItemView: UIView {
-    private weak var containerView: UIView!
+public class StatusBarItemView: NibView {
     @IBOutlet private weak var outerCircleView: UIView!
     @IBOutlet private weak var innerCircleView: UIView!
     @IBOutlet private weak var shadowCircleView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
     func configure(title: String, color: UIColor, isActive: Bool) {
         titleLabel.textColor = color
         titleLabel.text = title
+        titleLabel.lineBreakMode = .byWordWrapping
         
         if isActive {
             innerCircleView.backgroundColor = color
@@ -60,33 +50,5 @@ public class StatusBarItemView: UIView {
             innerCircleView.backgroundColor = .white
             shadowCircleView.backgroundColor = .clear
         }
-    }
-    
-    // MARK: - Private
-    private func setup() {
-        backgroundColor = UIColor.clear
-        let nibView = loadNib()
-        containerView = nibView
-        containerView.frame = bounds
-        addSubview(containerView)
-
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": nibView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": nibView]))
-
-        titleLabel.lineBreakMode = .byWordWrapping
-    }
-    
-    private func loadNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nibName = type(of: self).description().components(separatedBy: ".").last!
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as! UIView
     }
 }
