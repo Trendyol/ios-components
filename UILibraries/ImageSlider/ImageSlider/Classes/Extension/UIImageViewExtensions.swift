@@ -17,21 +17,24 @@ public enum ImageLoadingError: Error {
 }
 
 public extension UIImageView {
-    func setImageWith(path: String?,
-                            placeholder: UIImage? = nil,
-                            completion: ImageLoadingCompletion? = nil) {
-        guard let unwrappedPath = path?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines), let url = URL(string: unwrappedPath) else { return }
-        self.sd_setImage(with: url, placeholderImage: placeholder) { (image, error, _, _) in
+    func setImageWith(
+        path: String?,
+        placeholder: UIImage? = nil,
+        completion: ImageLoadingCompletion? = nil
+    ) {
+        guard let unwrappedPath = path?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines),
+              let url = URL(string: unwrappedPath) else { return }
+        self.sd_setImage(with: url, placeholderImage: placeholder) { image, error, _, _ in
             if let error = error {
                 completion?(.failure(ImageLoadingError.internalError(error)))
                 return
             }
-            
+
             guard let image = image else {
                 completion?(.failure(ImageLoadingError.noImage))
                 return
             }
-            
+
             completion?(.success(image))
         }
     }

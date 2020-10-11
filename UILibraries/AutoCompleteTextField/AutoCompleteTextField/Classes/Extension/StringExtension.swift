@@ -8,10 +8,9 @@
 
 import Foundation
 
-
 extension String {
     static let emailPattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]{0,}$"
-    
+
     var isValidEmail: Bool {
         do {
             let regex = try NSRegularExpression(pattern: String.emailPattern, options: .caseInsensitive)

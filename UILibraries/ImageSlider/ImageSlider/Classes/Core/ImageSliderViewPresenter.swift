@@ -41,7 +41,7 @@ public final class ImageSliderViewPresenter {
     // MARK: Private Helper Computed Variables
     private var innerPageIndex: Int {
         guard let view = view else { return 0 }
-        return Int(view.scrollViewContentOffsetXPos/view.scrollViewWidth)
+        return Int(view.scrollViewContentOffsetXPos / view.scrollViewWidth)
     }
 
     public lazy var presentedImageUrls: [String] = manipulateImageUrls(imageUrls)
@@ -50,7 +50,7 @@ public final class ImageSliderViewPresenter {
     private func manipulateImageUrls(_ imageUrls: [String]) -> [String] {
         guard imageUrls.count > 1 else { return imageUrls }
         guard loopingEnabled else { return imageUrls }
-        
+
         guard let firstElement = imageUrls.first, let lastElement = imageUrls.last else { return imageUrls }
 
         var transformedArray = [String]()
@@ -69,7 +69,6 @@ public final class ImageSliderViewPresenter {
             let destinationIndex = imageUrls.count
             let destinationWidth = view.scrollViewWidth * Double(destinationIndex)
             view.scroll(to: destinationWidth, animate: false)
-
         } else if innerPageIndex == presentedImageUrlsCount - 1 {
             let destinationIndex = 1
             let destinationWidth = view.scrollViewWidth * Double(destinationIndex)

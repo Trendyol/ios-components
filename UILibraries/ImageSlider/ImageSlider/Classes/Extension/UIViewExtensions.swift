@@ -19,18 +19,18 @@ extension UIView {
         case width(CGFloat)
         case height(CGFloat)
     }
-    
+
     @discardableResult
     func embedEdgeToEdge(in containerView: UIView) -> [NSLayoutConstraint] {
         return embed(in: containerView, anchors: [.leading(0), .trailing(0), .bottom(0), .top(0)])
     }
-    
+
     @discardableResult
     func embed(in superView: UIView, anchors: [Anchor], additionalConstraints: [NSLayoutConstraint]? = nil) -> [NSLayoutConstraint] {
         superView.addSubview(self)
         var constraints = additionalConstraints ?? [NSLayoutConstraint]()
-        
-        anchors.forEach { (anchor) in
+
+        anchors.forEach { anchor in
             switch anchor {
             case .leading(let value):
                 constraints.append(leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: value))
@@ -50,7 +50,7 @@ extension UIView {
                 constraints.append(heightAnchor.constraint(equalToConstant: value))
             }
         }
-        
+
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(constraints)
         return constraints

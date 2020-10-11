@@ -25,13 +25,14 @@ public protocol ImageSliderViewInterface: class {
 }
 
 public final class ImageSliderView: UIView {
-
     // MARK: Properties
+    // swiftlint:disable implicitly_unwrapped_optional
     public var presenter: ImageSliderViewPresenterInterface! {
         didSet {
             presenter.load()
         }
     }
+    // swiftlint:enable implicitly_unwrapped_optional
 
     // MARK: Outlets
     private lazy var collectionView: UICollectionView = {
@@ -44,11 +45,11 @@ public final class ImageSliderView: UIView {
         collection.showsHorizontalScrollIndicator = false
         return collection
     }()
-    
+
     private lazy var pager: ImageSliderPagerView = {
         return ImageSliderPagerView(frame: .zero)
     }()
-    
+
     private lazy var thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -80,8 +81,16 @@ extension ImageSliderView: UICollectionViewDataSource {
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageSliderCollectionViewCell", for: indexPath) as? ImageSliderCollectionViewCell else { fatalError() }
-        let cellPresenter = ImageSliderCollectionViewCellPresenter(imageUrl: presenter!.presentedImageUrls[indexPath.row], view: cell)
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "ImageSliderCollectionViewCell",
+            for: indexPath
+        ) as? ImageSliderCollectionViewCell else { fatalError("ImageSliderCollectionViewCell could not be converted.") }
+
+        let cellPresenter = ImageSliderCollectionViewCellPresenter(
+            imageUrl: presenter.presentedImageUrls[indexPath.row],
+            view: cell
+        )
+
         cell.presenter = cellPresenter
         return cell
     }
@@ -103,7 +112,12 @@ extension ImageSliderView: ImageSliderViewInterface {
 
     public var presentedImageView: UIImageView? {
         guard let presenter = presenter else { return nil }
-        guard let cell = collectionView.cellForItem(at: IndexPath(row: presenter.currentInnerPageIndex, section: 0)) as? ImageSliderCollectionViewCell else { return nil }
+        guard let cell = collectionView.cellForItem(
+            at: IndexPath(
+                row: presenter.currentInnerPageIndex,
+                section: 0
+            )
+        ) as? ImageSliderCollectionViewCell else { return nil }
         return cell.contentImageView
     }
 
@@ -135,17 +149,17 @@ extension ImageSliderView: ImageSliderViewInterface {
         collectionView.register(ImageSliderCollectionViewCell.self, forCellWithReuseIdentifier: "ImageSliderCollectionViewCell")
         collectionView.isPagingEnabled = true
     }
-    
+
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
+
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         collectionView.setCollectionViewLayout(flowLayout, animated: false)
-        
+
         pager.layoutIfNeeded()
     }
-    
+
     public func prepareSubviews() {
         collectionView.embedEdgeToEdge(in: self)
         pager.embed(in: self, anchors: [.centerX(0), .bottom(-15), .height(19)])

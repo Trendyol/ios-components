@@ -9,6 +9,8 @@
 import UIKit
 
 private extension ImageSliderPagerView {
+    // swiftlint:disable nesting
+    // swiftlint:disable type_name
     enum Constant {
         enum UI {
             static let cornerRadius: CGFloat = 10
@@ -17,34 +19,39 @@ private extension ImageSliderPagerView {
             static let pageControlVerticalInset: CGFloat = 6
         }
     }
+    // swiftlint:enable nesting
+    // swiftlint:enable type_name
 }
 
 final class ImageSliderPagerView: UIView {
     lazy var pageControl = UIPageControl()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
+
     private func commonInit() {
         layer.cornerRadius = Constant.UI.cornerRadius
         layer.masksToBounds = true
         backgroundColor = UIColor.black.withAlphaComponent(Constant.UI.backgroundAlpha)
         preparePageControl()
     }
-    
+
     private func preparePageControl() {
-        pageControl.embed(in: self, anchors: [
-            .leading(Constant.UI.pageControlHorizontalInset),
-            .trailing(-Constant.UI.pageControlHorizontalInset),
-            .top(Constant.UI.pageControlVerticalInset),
-            .bottom(-Constant.UI.pageControlVerticalInset)]
+        pageControl.embed(
+            in: self,
+            anchors: [
+                .leading(Constant.UI.pageControlHorizontalInset),
+                .trailing(-Constant.UI.pageControlHorizontalInset),
+                .top(Constant.UI.pageControlVerticalInset),
+                .bottom(-Constant.UI.pageControlVerticalInset)
+            ]
         )
     }
 }

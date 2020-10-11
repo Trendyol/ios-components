@@ -11,7 +11,7 @@ import TYAutoCompleteTextField
 
 final class AutoCompleteTextFieldViewController: UIViewController {
     @IBOutlet private weak var textField: AutoCompleteTextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,13 +19,13 @@ final class AutoCompleteTextFieldViewController: UIViewController {
         textField.completionValues = ["trendyol.com"]
         textField.completionValues.append(contentsOf: AutoCompleteTextField.defaultDomains)
         textField.autoCompleteType = .email
-        
+
         let gesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
         view.addGestureRecognizer(gesture)
         view.isUserInteractionEnabled = true
     }
 
-    @objc func endEditing(){
+    @objc func endEditing() {
         view.endEditing(true)
     }
 }

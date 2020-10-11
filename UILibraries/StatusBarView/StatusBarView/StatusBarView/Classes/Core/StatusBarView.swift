@@ -19,8 +19,8 @@ public class StatusBarView: UIView {
     @IBOutlet private weak var linesStackView: UIStackView!
     @IBOutlet private weak var linesStackViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet private weak var linesStackViewTrailingConstraint: NSLayoutConstraint!
-    private weak var containerView: UIView!
-    
+    private var containerView = UIView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -30,7 +30,7 @@ public class StatusBarView: UIView {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     /**
     Configures the view with the given parameters.
 
@@ -40,38 +40,40 @@ public class StatusBarView: UIView {
        - activeColor: color of the active items
        - passiveColor: color of the passive items
     */
-    public func configure(titles: [String],
-                          activeIndex: Int = 0,
-                          activeColor: UIColor = .systemGreen,
-                          passiveColor: UIColor = .systemGray) {
+    public func configure(
+        titles: [String],
+        activeIndex: Int = 0,
+        activeColor: UIColor = .systemGreen,
+        passiveColor: UIColor = .systemGray
+    ) {
         removeAllSubviews(of: statusesStackView)
         removeAllSubviews(of: linesStackView)
-        
+
         var isLastActiveItem = false
         for (index, title) in titles.enumerated() {
             let selectedColor = isLastActiveItem ? passiveColor : activeColor
             let itemView = StatusBarItemView()
             itemView.configure(title: title, color: selectedColor, isActive: !isLastActiveItem)
             statusesStackView.addArrangedSubview(itemView)
-            
+
             if index > 0 {
                 let lineWidth = statusesStackView.bounds.width / CGFloat(titles.count)
                 let lineView = createLineView(color: selectedColor, width: lineWidth)
                 linesStackView.addArrangedSubview(lineView)
             }
-            
+
             if index == activeIndex {
                 isLastActiveItem = true
             }
         }
-        guard titles.count > 0 else { return }
-        
+        guard !titles.isEmpty else { return }
+
         let statusesWidth = bounds.width - (CGFloat(titles.count - 1) * statusesStackView.spacing)
         let linesSpacing = (statusesWidth / CGFloat(titles.count)) / 2
         linesStackViewLeadingConstraint.constant = linesSpacing
         linesStackViewTrailingConstraint.constant = linesSpacing
     }
-    
+
     // MARK: - Private
     private func setup() {
         backgroundColor = UIColor.clear
@@ -81,30 +83,38 @@ public class StatusBarView: UIView {
         addSubview(containerView)
 
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": nibView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": nibView]))
+        addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "H:|[childView]|",
+                options: [],
+                metrics: nil,
+                views: ["childView": nibView]
+            )
+        )
+        addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "V:|[childView]|",
+                options: [],
+                metrics: nil,
+                views: ["childView": nibView]
+            )
+        )
     }
-    
+
     private func loadNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
-        let nibName = type(of: self).description().components(separatedBy: ".").last!
+        let nibName = Self.self.description().components(separatedBy: ".").last ?? ""
         let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as! UIView
+        return nib.instantiate(withOwner: self, options: nil).first as? UIView ?? UIView()
     }
-    
+
     private func removeAllSubviews(of stackView: UIStackView) {
         for subview in stackView.arrangedSubviews {
             stackView.removeArrangedSubview(subview)
             subview.removeFromSuperview()
         }
     }
-    
+
     private func createLineView(color: UIColor, width: CGFloat) -> UIView {
         let lineView = UIView()
         lineView.heightAnchor.constraint(equalToConstant: Constant.lineHeight).isActive = true

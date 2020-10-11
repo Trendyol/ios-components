@@ -6,8 +6,12 @@
 //  Copyright © 2020 Trendyol. All rights reserved.
 //
 
-public protocol EnumDefaultValueSelectable: Codable & CaseIterable & RawRepresentable where RawValue: Decodable, AllCases: BidirectionalCollection { }
+public protocol EnumDefaultValueSelectable: Codable
+& CaseIterable
+& RawRepresentable
+where RawValue: Decodable, AllCases: BidirectionalCollection { }
 
+// swiftlint:disable force_unwrapping
 public struct LastCase<T>: DefaultCodableInterface where T: EnumDefaultValueSelectable {
     public static var defaultValue: T { T.allCases.last! }
 }
@@ -15,4 +19,4 @@ public struct LastCase<T>: DefaultCodableInterface where T: EnumDefaultValueSele
 public struct FirstCase<T>: DefaultCodableInterface where T: EnumDefaultValueSelectable {
     public static var defaultValue: T { T.allCases.first! }
 }
-
+// swiftlint:enable force_unwrapping
