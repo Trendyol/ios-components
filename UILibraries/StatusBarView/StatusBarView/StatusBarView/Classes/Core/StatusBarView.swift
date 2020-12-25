@@ -92,7 +92,11 @@ public class StatusBarView: UIView {
     }
     
     private func loadNib() -> UIView {
+        #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+        #else
         let bundle = Bundle(for: type(of: self))
+        #endif
         let nibName = type(of: self).description().components(separatedBy: ".").last!
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as! UIView
