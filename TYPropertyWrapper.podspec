@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '11.0'
   spec.name         = "TYPropertyWrapper"
   spec.summary      = "TYPropertyWrapper for iOS"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Anıl Taşkıran" => "anil.taskiran@trendyol.com" }
   spec.homepage     = "https://www.trendyol.com"

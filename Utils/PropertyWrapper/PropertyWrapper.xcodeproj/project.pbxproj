@@ -19,6 +19,7 @@
 		4D59A9FD2454F1C400E0CEA4 /* Capitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59A9FC2454F1C400E0CEA4 /* Capitalized.swift */; };
 		4D59A9FF2454F2A400E0CEA4 /* DefaultTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59A9FE2454F2A400E0CEA4 /* DefaultTrue.swift */; };
 		4D59AA012454F72D00E0CEA4 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59AA002454F72D00E0CEA4 /* UserDefaults.swift */; };
+		5583E4F5262EBBEE009739A9 /* DefaultEmptyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583E4F4262EBBEE009739A9 /* DefaultEmptyArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4D59A9FC2454F1C400E0CEA4 /* Capitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capitalized.swift; sourceTree = "<group>"; };
 		4D59A9FE2454F2A400E0CEA4 /* DefaultTrue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTrue.swift; sourceTree = "<group>"; };
 		4D59AA002454F72D00E0CEA4 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		5583E4F4262EBBEE009739A9 /* DefaultEmptyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +112,13 @@
 		4D59A9ED2454E67C00E0CEA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4D59A9EF2454E6D100E0CEA4 /* DefaultCodable.swift */,
 				4D59A9FC2454F1C400E0CEA4 /* Capitalized.swift */,
-				4D59AA002454F72D00E0CEA4 /* UserDefaults.swift */,
-				4D59A9FE2454F2A400E0CEA4 /* DefaultTrue.swift */,
+				4D59A9EF2454E6D100E0CEA4 /* DefaultCodable.swift */,
+				5583E4F4262EBBEE009739A9 /* DefaultEmptyArray.swift */,
 				4D59A9FA2454EEE100E0CEA4 /* DefaultFalse.swift */,
+				4D59A9FE2454F2A400E0CEA4 /* DefaultTrue.swift */,
 				4D59A9F12454E6EC00E0CEA4 /* EnumDefaultValueSelectable.swift */,
+				4D59AA002454F72D00E0CEA4 /* UserDefaults.swift */,
 				4D59A9F32454E70000E0CEA4 /* Extension */,
 			);
 			path = Classes;
@@ -252,6 +255,7 @@
 				4D59A9F52454E70700E0CEA4 /* KeyedDecodingContainer.swift in Sources */,
 				4D59A9F02454E6D100E0CEA4 /* DefaultCodable.swift in Sources */,
 				4D59A9FD2454F1C400E0CEA4 /* Capitalized.swift in Sources */,
+				5583E4F5262EBBEE009739A9 /* DefaultEmptyArray.swift in Sources */,
 				4D59AA012454F72D00E0CEA4 /* UserDefaults.swift in Sources */,
 				4D59A9FF2454F2A400E0CEA4 /* DefaultTrue.swift in Sources */,
 			);
