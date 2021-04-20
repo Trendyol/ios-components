@@ -39,4 +39,16 @@ final class PropertyWrapperTests: XCTestCase {
         let response = try! JSONDecoder().decode(UserResponse.self, from: jsonData)
         XCTAssertFalse(response.isAdmin)
     }
+
+    func test_EmptyArrayUserResponse_TagsShouldBeEmpty() {
+        let jsonData = #"{ "tags": null }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(UserResponse.self, from: jsonData)
+        XCTAssertEqual(response.tags, [])
+    }
+
+    func test_EmptyArrayUserResponse_TagsShouldNotBeEmpty() {
+        let jsonData = #"{ "tags": ["iOS", "mobile"] }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(UserResponse.self, from: jsonData)
+        XCTAssertEqual(response.tags, ["iOS", "mobile"])
+    }
 }
