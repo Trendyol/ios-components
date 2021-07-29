@@ -70,6 +70,10 @@ Custom collection view with pagination implementation, guarantees that all pages
 
 [ContinuousPagingView Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/ContinuousPagingView)
 
+# LinkLabel
+Custom label which provides clickable hashtags and links
+
+[LinkLabel Link](https://github.com/Trendyol/ios-components/tree/master/UILibraries/LinkLabel)
 
 License
 --------
