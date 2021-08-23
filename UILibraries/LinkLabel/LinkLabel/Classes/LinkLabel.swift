@@ -107,28 +107,27 @@ public final class TYLinkLabel: UILabel {
     }
 
     private func indexOfAttributedTextCharacter(at point: CGPoint) -> Int {
-      guard let attributedString = attributedText, let labelFont = font else { return -1 }
+        guard let attributedString = attributedText, let labelFont = font else { return -1 }
 
-      let mutableAttribString = NSMutableAttributedString(attributedString: attributedString)
-      mutableAttribString.addAttributes([NSAttributedString.Key.font: labelFont],
-                                        range: NSRange(location: 0,
-                                                       length: attributedString.length))
+        let mutableAttribString = NSMutableAttributedString(attributedString: attributedString)
+        mutableAttribString.addAttributes([NSAttributedString.Key.font: labelFont],
+                                          range: NSRange(location: 0,
+                                                         length: attributedString.length))
 
-      let textStorage = NSTextStorage(attributedString: mutableAttribString)
-      let layoutManager = NSLayoutManager()
-      textStorage.addLayoutManager(layoutManager)
-      let textContainer = NSTextContainer(size: frame.size)
-      textContainer.lineFragmentPadding = 0
-      textContainer.maximumNumberOfLines = numberOfLines
-      textContainer.lineBreakMode = lineBreakMode
-      layoutManager.addTextContainer(textContainer)
+        let textStorage = NSTextStorage(attributedString: mutableAttribString)
+        let layoutManager = NSLayoutManager()
+        textStorage.addLayoutManager(layoutManager)
+        let textContainer = NSTextContainer(size: frame.size)
+        textContainer.lineFragmentPadding = 0
+        textContainer.maximumNumberOfLines = numberOfLines
+        textContainer.lineBreakMode = lineBreakMode
+        layoutManager.addTextContainer(textContainer)
 
-      let index = layoutManager.characterIndex(for: point,
-                                               in: textContainer,
-                                               fractionOfDistanceBetweenInsertionPoints: nil)
-      return index
+        let index = layoutManager.characterIndex(for: point,
+                                                 in: textContainer,
+                                                 fractionOfDistanceBetweenInsertionPoints: nil)
+        return index
     }
-
 
     public func handleCustomTap(for type: LabelLink, handler: @escaping (LabelLink) -> ()) {
         linkTapHandlers[type] = handler
