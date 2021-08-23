@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(name: "TYStatusBarView", targets: ["TYStatusBarView"]),
         .library(name: "TYPropertyWrapper", targets: ["TYPropertyWrapper"]),
+        .library(name: "TYLinkLabel", targets: ["TYLinkLabel"]),
         .library(name: "TYAutoCompleteTextField", targets: ["TYAutoCompleteTextField"]),
         .library(name: "TYContinuousPagingView", targets: ["TYContinuousPagingView"]),
         .library(name: "TYPinchableImageView", targets: ["TYPinchableImageView"]),
@@ -20,6 +21,10 @@ let package = Package(
         .target(
             name: "TYStatusBarView",
             path: "UILibraries/StatusBarView/StatusBarView/StatusBarView/Classes"
+        ),
+        .target(
+            name: "TYLinkLabel",
+            path: "UILibraries/LinkLabel/LinkLabel/Classes"
         ),
         .target(
             name: "TYAutoCompleteTextField",
