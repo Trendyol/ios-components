@@ -102,7 +102,7 @@ public final class TYLinkLabel: UILabel {
     private func isTapped(link:LabelLink, tapIndex:Int) -> Bool{
         let linkedText = link.title
         guard let linkedTextRange = attributedText?.string.range(of: linkedText),
-              let targetRange = attributedText?.string.range(from: linkedTextRange) else {return false}
+              let targetRange = attributedText?.string.range(from: linkedTextRange) else { return false }
         return tapIndex > targetRange.location && tapIndex < targetRange.location + targetRange.length
     }
 
