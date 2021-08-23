@@ -93,7 +93,7 @@ public final class TYLinkLabel: UILabel {
     @objc private func tapLabel(gesture: UITapGestureRecognizer) {
         let tapLocation = gesture.location(in: self)
         let tapIndex = indexOfAttributedTextCharacter(at: tapLocation)
-        for link in links where isTapped(link: link, tapIndex: tapIndex){
+        for link in links where isTapped(link: link, tapIndex: tapIndex) {
             didTap(for: link)
             return
         }
