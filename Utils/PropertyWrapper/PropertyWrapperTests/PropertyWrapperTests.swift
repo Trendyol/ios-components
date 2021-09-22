@@ -51,4 +51,28 @@ final class PropertyWrapperTests: XCTestCase {
         let response = try! JSONDecoder().decode(UserResponse.self, from: jsonData)
         XCTAssertEqual(response.tags, ["iOS", "mobile"])
     }
+
+    func test_PaymentResponseWithIntegerOrderId_OrderIdShouldBeDecodedAsString() {
+        let jsonData = #"{ "success": true, "orderId": 123 }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(PaymentResponse.self, from: jsonData)
+        XCTAssertEqual(response.orderId, "123")
+    }
+
+    func test_PaymentResponseWithStringOrderId_OrderIdShouldBeDecodedAsString() {
+        let jsonData = #"{ "success": true, "orderId": "123" }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(PaymentResponse.self, from: jsonData)
+        XCTAssertEqual(response.orderId, "123")
+    }
+
+    func test_PaymentResponseWithNilOrderId_OrderIdShouldBeDecodedAsNil() {
+        let jsonData = #"{ "success": true, "orderId": null }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(PaymentResponse.self, from: jsonData)
+        XCTAssertNil(response.orderId)
+    }
+
+    func test_PaymentResponseWithoutOrderId_OrderIdShouldBeDecodedAsNil() {
+        let jsonData = #"{ "success": true }"#.data(using: .utf8)!
+        let response = try! JSONDecoder().decode(PaymentResponse.self, from: jsonData)
+        XCTAssertNil(response.orderId)
+    }
 }

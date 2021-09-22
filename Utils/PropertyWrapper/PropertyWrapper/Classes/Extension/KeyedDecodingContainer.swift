@@ -14,4 +14,11 @@ public extension KeyedDecodingContainer {
             return DefaultCodable(wrappedValue: T.defaultValue)
         }
     }
+
+    func decode<T: ExpressibleByNilLiteral>(_ type: StringOrInt<T>.Type, forKey key: K) throws -> StringOrInt<T> {
+        if let value = try decodeIfPresent(type, forKey: key) {
+            return value
+        }
+        return StringOrInt(wrappedValue: nil)
+    }
 }
