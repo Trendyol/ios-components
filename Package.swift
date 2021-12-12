@@ -41,6 +41,7 @@ let package = Package(
         .target(
             name: "TYImageSlider",
             dependencies: [
+                "TYPinchableImageView",
                 .product(name: "SDWebImage", package: "SDWebImage")
             ],
             path: "UILibraries/ImageSlider/ImageSlider/Classes"
