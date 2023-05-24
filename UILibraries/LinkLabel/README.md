@@ -2,18 +2,6 @@
 
 **Custom label which provides clickable hashtags and links**
 
-## Setup
-
-**Using CocoaPods**
-
-Add the line below to your Podfile;
-
-```
-pod 'TYLinkLabel'
-```
-
-Then you can install it with *pod install* command.
-
 ## Usage
 First place an UIView in storyboard or xib, make its class to **TYLinkLabel**. Connect it to code by making outlet;
 
