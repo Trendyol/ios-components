@@ -1,4 +1,6 @@
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Trendyol/ios-components/badge)](https://scorecard.dev/viewer/?uri=github.com/Trendyol/ios-components)
+
 <img src="https://i.hizliresim.com/Z5GJRA.png" width="500"/>
 
 **iOS Components** for iOS by Trendyol application development team.
