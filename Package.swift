@@ -49,6 +49,12 @@ let package = Package(
         .target(
             name: "TYPinchableImageView",
             path: "UILibraries/PinchableImageView/PinchableImageView/PinchableImageView/Classes"
+        ),
+        .testTarget(
+            name: "TYPropertyWrapperTests",
+            dependencies: ["TYPropertyWrapper"],
+            path: "Utils/PropertyWrapper/PropertyWrapperTests",
+            exclude: ["Info.plist"]
         )
     ]
 )

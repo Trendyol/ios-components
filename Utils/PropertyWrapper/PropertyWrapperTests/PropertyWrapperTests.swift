@@ -7,7 +7,11 @@
 //
 
 import XCTest
+#if canImport(TYPropertyWrapper)
+@testable import TYPropertyWrapper
+#else
 @testable import PropertyWrapper
+#endif
 
 final class PropertyWrapperTests: XCTestCase {
     func test_AdminType_ShouldBeGivenTypeSelected() {
